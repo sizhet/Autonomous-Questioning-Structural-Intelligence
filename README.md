@@ -173,7 +173,14 @@ These connections are proposed research interfaces, not claims of existing runti
 
 Please use [CITATION.cff](CITATION.cff) for the preferred citation metadata once finalized. A DOI should be added only after an actual archive release has assigned one; none is asserted here.
 
-Unless a specific file states otherwise, this repository is intended to be released under the **Apache License 2.0**. See [LICENSE](LICENSE).
+Unless a specific file states otherwise, this repository is intended to be released under the **Apache License 2.0**. See [LICENSE.txt](LICENSE.txt).
+
+---
+
+## 📚 DBM-SI Series Navigation
+
+See:\
+[./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md](./docs/DBM-SI-Series-of-gitHub-Repositories/DBM-SI-Series-of-gitHub-Repositories.md)
 
 ---
 

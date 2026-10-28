@@ -96,7 +96,7 @@ See [FIGURE-INDEX.md](FIGURE-INDEX.md) for captions, usage and placement guidanc
 | [CHANGELOG.md](CHANGELOG.md) | Version history |
 | [CITATION.cff](CITATION.cff) | Machine-readable citation metadata |
 | [.zenodo.json](.zenodo.json) | Zenodo deposit metadata |
-| [LICENSE](LICENSE) | Apache-2.0 licensing text |
+| [LICENSE.txt](LICENSE.txt) | Apache-2.0 licensing text |
 
 Some repository-level publication assets may be prepared after the core papers; links above are the intended canonical paths and should be checked during release review.
 

@@ -118,7 +118,7 @@
 From a manuscript under `docs/`, `specs/`, `cases/`, or `extensions/`, use a **relative path one directory upward** to the figure:
 
 ```markdown
-![Figure 3. Typed multi-granularity directional influence graph.](../figures/Fig-003-Multi-Granularity-Influence-Graph.png)
+![Figure 3. Typed multi-granularity directional influence graph.](figures/Fig-003-Multi-Granularity-Influence-Graph.png)
 
 *Figure 3. Typed, directed, multi-granularity structural relationships from which question-level influence estimates may be composed.*
 ```
@@ -151,3 +151,4 @@ Keep figure numbers stable across documents. A repeated figure should retain its
 ---
 
 **Research stance:** Specifications before runtime; evidence before claims; open, provenance-preserving Collective Learning. Figures are explanatory research artifacts and do not by themselves validate AQSI performance.
+

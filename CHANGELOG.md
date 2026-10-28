@@ -107,7 +107,7 @@ The v1.0.0 research plan defines eight figure identifiers:
 
 - Intended initial public research release: `v1.0.0`.
 - Intended repository: `https://github.com/sizhet/Autonomous-Questioning-Structural-Intelligence` (confirm repository URL before publication).
-- License preference: Apache-2.0; confirm that the repository contains the corresponding `LICENSE` file.
+- License preference: Apache-2.0; confirm that the repository contains the corresponding `LICENSE.txt` file.
 - Citation metadata, Zenodo metadata, GitHub release notes, and ResearchGate assets should be checked and finalized separately before DOI registration.
 - **No DOI is asserted in this changelog.** Add a verified DOI only after it has been issued.
 
