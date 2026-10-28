@@ -86,9 +86,9 @@ A concept may be decomposed into attributes, components, mechanisms, methods, co
 
 A provisional structural influence function is:
 
-\[
-I(q_i,q_j)=\operatorname{Fold}_{a,b}\!\left[w_{ab}\,R(h_{ia},h_{jb})\right],
-\]
+$$
+I(q_i,q_j)=operatorname{Fold}_{a,b}\!\left[w_{ab}\,R(h_{ia},h_{jb})\right],
+$$
 
 where \(h_{ia}\) and \(h_{jb}\) are addressable structural units associated with two questions, \(R\) evaluates a typed relation, \(w_{ab}\) represents contextual and evidential weighting, and **Fold** denotes a specified composition operator. The operator may be additive, constrained, nonlinear, or otherwise task-appropriate. The score can be directional: \(I(q_i,q_j)\neq I(q_j,q_i)\).
 
@@ -102,9 +102,9 @@ Cross-domain comparison requires more than similar words. A proposed UTN-aligned
 
 AQSI proposes a historical repository containing questions, their structures, past evaluations, actual exploration outcomes, costs, and downstream relay effects. For a historical set
 
-\[
+$$
 \mathcal{H}_t=\{(q_i,X_i,S_i,O_i,R_i)\}_{i=1}^{N},
-\]
+$$
 
 \(X_i\) denotes structural features, \(S_i\) past assessments, \(O_i\) observed outcomes, and \(R_i\) relay records. A new question can be evaluated using both its current structural relationships and relevant historical experience.
 
@@ -124,9 +124,9 @@ AQSI distinguishes the absence of a **specific externally selected target questi
 
 For candidate questions \(Q=\{q_1,\ldots,q_n\}\), one baseline is a directional pairwise matrix:
 
-\[
+$$
 M_{ij}=I(q_i,q_j),\qquad S_{\mathrm{group}}(q_i)=\sum_{j\ne i}M_{ij}.
-\]
+$$
 
 The group score estimates how a question relates to or influences other candidates. It is inexpensive to understand and test, but can favor dense clusters of familiar topics. AQSI therefore treats it as a **baseline**, not an unquestioned optimal selector. Historical evidence, uncertainty, structural novelty, and prospective relay value may be represented within the underlying multi-granularity structure and combined by configurable scoring operators.
 
@@ -160,10 +160,10 @@ A question can produce value even without a complete answer, provided the result
 
 The proposed loop is:
 
-\[
+$$
 Q_t\rightarrow\text{Exploration}_t\rightarrow\text{Evidence/Residuals}_t
 \rightarrow\text{Relay Update}_t\rightarrow Q_{t+1}.
-\]
+$$
 
 Repeated execution may itself be a form of relay when it accumulates informative observations; repetition without new information should not be automatically rewarded.
 

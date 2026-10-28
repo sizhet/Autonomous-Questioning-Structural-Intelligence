@@ -172,18 +172,17 @@ A candidate is not accepted merely because it is grammatically well formed. It m
 
 For question units \(q_i\) and \(q_j\), let \(H(q)\) denote the set of structural factors attached to a question. A general directional influence estimate is:
 
-\[
-\widehat I(q_i\!\rightarrow\!q_j)
-= \operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
+$$
+\widehat I(q_i\!\rightarrow\!q_j) = operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \bigl(w_{ab},\,R(h_{ia},h_{jb}),\,E_{ab},\,U_{ab}\bigr).
-\]
+$$
 
 Here \(R\) represents a typed relation; \(E\) captures supporting or opposing evidence; \(U\) captures uncertainty; and `Fold` is a configurable aggregation operator. No single linear aggregation is presumed universally correct. In general,
 
-\[
+$$
 \widehat I(q_i\!\rightarrow\!q_j) \neq
 \widehat I(q_j\!\rightarrow\!q_i).
-\]
+$$
 
 Influence should be separated from similarity, causal effect, and realized downstream research value. A relation can be strong as a hypothesis yet weakly supported empirically.
 
@@ -191,9 +190,9 @@ Influence should be separated from similarity, causal effect, and realized downs
 
 A historical record should preserve at least the question, structural representation, selection context, exploration procedure, observed outcome, evaluation criteria, costs, and delayed relay effects. The resulting scorer can estimate a conditional distribution rather than only a point value:
 
-\[
+$$
 P(Y_q\mid X_q,\mathcal H_t,\pi_t),
-\]
+$$
 
 where \(X_q\) denotes structural features, \(\mathcal H_t\) the historical corpus, and \(\pi_t\) the historical selection policy. Conditioning on the selection policy matters because previously explored questions are not a random sample of all candidates.
 
@@ -203,9 +202,9 @@ The MVP should support an explicit **defer/revisit** decision. Low predicted val
 
 Question Differential Trees (QDTs) can encode a shared structural core plus variations:
 
-\[
-q_k = \operatorname{Instantiate}(C,\Delta_k,\Gamma_k),
-\]
+$$
+q_k = operatorname{Instantiate}(C,\Delta_k,\Gamma_k),
+$$
 
 where \(C\) is a shared core, \(\Delta_k\) is a question-specific structural delta, and \(\Gamma_k\) is the relevant domain and evidence context. QDTs may improve retrieval and transfer, but their compression and scoring value must be measured rather than assumed.
 
@@ -213,19 +212,19 @@ where \(C\) is a shared core, \(\Delta_k\) is a question-specific structural del
 
 A useful baseline, in the absence of a predetermined target question, is the aggregate outgoing influence:
 
-\[
+$$
 S_{\mathrm{out}}(q_i)=\sum_{j\ne i}\widehat I(q_i\rightarrow q_j).
-\]
+$$
 
 This is a **baseline hypothesis**, not a proof of research utility. It can favor broadly connected questions, reward inflated relationship estimates, and miss rare but transformative questions. Accordingly, the architecture supports alternative scorers and uncertainty-aware portfolio policies.
 
 A general portfolio decision is:
 
-\[
+$$
 P_t^* \in \arg\max_{P\subseteq Q_t}
 \mathbb E\bigl[V(P\mid \mathcal H_t,\pi_t)\bigr]
 \quad \text{subject to } C(P)\le B_t,\;P\in\mathcal F_t.
-\]
+$$
 
 Here \(B_t\) is the authorized budget and \(\mathcal F_t\) is the set of policy-compliant portfolios. The value function may incorporate expected information gain, structural relay potential, diversity, redundancy, confidence, and deferred exploration opportunities. These are candidate objectives to compare empirically, not mandatory additive bonuses.
 
@@ -370,12 +369,12 @@ AQSI distinguishes three evolution loops:
 
 A candidate improvement \(\Delta_t\) is accepted only if its evaluation satisfies predetermined constraints:
 
-\[
-\operatorname{Accept}(\Delta_t)=
+$$
+operatorname{Accept}(\Delta_t)=
 \mathbf 1\{\Delta \widehat U_{\mathrm{heldout}}>\tau\}
-\cdot \mathbf 1\{\operatorname{Conformance}(\Delta_t)=\mathrm{pass}\}
-\cdot \mathbf 1\{\operatorname{Risk}(\Delta_t)\le r_{\max}\}.
-\]
+\cdot \mathbf 1\{operatorname{Conformance}(\Delta_t)=\mathrm{pass}\}
+\cdot \mathbf 1\{operatorname{Risk}(\Delta_t)\le r_{\max}\}.
+$$
 
 The notation is illustrative: practical acceptance may require confidence intervals, multiple independent tests, and human approval. It is important to measure **net** gains after accounting for evaluation cost and additional compute.
 

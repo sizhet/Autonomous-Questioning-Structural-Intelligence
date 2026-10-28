@@ -36,12 +36,12 @@ This paper proposes a research interface, not a new proven law of association. T
 
 Let a question \(q\) be represented by a finite, versioned collection of structural units:
 
-\[
+$$
 H(q)=\{u_1,u_2,\ldots,u_m\},\qquad
 u(u)\in\mathcal{T},\quad g(u)\in\mathcal{G}.
-\]
+$$
 
-Here \(\nu(u)\) is the unit's type and \(g(u)\) its granularity. Example types include:
+Here $\nu(u)$ is the unit's type and $g(u)$ its granularity. Example types include:
 
 | Type | Example | Potential use |
 |---|---|---|
@@ -95,9 +95,9 @@ Potential alignments include `method → residual`, `attribute → constraint`, 
 
 Define a heterogeneous, potentially multilayer graph:
 
-\[
+$$
 G_t=(V_t,E_t,\tau_V,\tau_E,P_t),
-\]
+$$
 
 where \(V_t\) are structural units, \(E_t\subseteq V_t\times V_t\) are directed candidate relations, \(\tau_V\) and \(\tau_E\) specify node and edge types, and \(P_t\) records provenance, time, confidence, and evidence.
 
@@ -118,33 +118,33 @@ An edge is a hypothesis about a relationship until evidence supports it. Mere co
 
 For units \(u\) and \(v\), let
 
-\[
+$$
 r_t(u,v\mid c,\rho)\in\mathbb{R}
-\]
+$$
 
 be a context- and relation-specific score, where \(c\) describes the current research setting and \(\rho\) is the proposed relationship type. Its scale, sign, and interpretation must be declared by the scorer contract. A score is accompanied by uncertainty and evidence provenance, not only a scalar.
 
 **Directionality is fundamental:**
 
-\[
+$$
 r_t(u,v\mid c,\rho)\neq r_t(v,u\mid c,\rho)
-\]
+$$
 
 in general. For example, a method from domain A may address a residual in domain B, while the residual does not provide an equally useful method for domain A.
 
 For questions \(q_i\) and \(q_j\), define candidate unit-pair relations
 
-\[
+$$
 \mathcal{P}_{ij}=\{(u,v,\rho):u\in H(q_i),v\in H(q_j),\rho\in\mathcal{R}\}.
-\]
+$$
 
 The question-level directional influence is then
 
-\[
+$$
 I_t(q_i\rightarrow q_j\mid c)=
-\operatorname{Fold}_{\Phi_c}
+operatorname{Fold}_{\Phi_c}
 \left(\{(r_t(u,v\mid c,\rho),w_{uv\rho},e_{uv\rho})\}_{\mathcal{P}_{ij}}\right),
-\]
+$$
 
 where \(w\) is a context-dependent weight, \(e\) captures evidence and uncertainty, and \(\Phi_c\) is an explicitly selected folding policy. The expression is a family of algorithms rather than a fully specified numerical estimator.
 
@@ -160,9 +160,9 @@ A high influence score means a structural connection appears promising under a s
 
 Let the historical question registry contain:
 
-\[
+$$
 \mathcal{H}_t=\{(q_k,X_k,s_k,o_k,\ell_k,p_k)\}_{k=1}^{N_t},
-\]
+$$
 
 where \(X_k\) is the structural representation, \(s_k\) an earlier estimate, \(o_k\) an observed exploration outcome, \(\ell_k\) downstream relay evidence, and \(p_k\) provenance and evaluation context.
 
@@ -174,9 +174,9 @@ A new question can be evaluated against both current candidate peers and relevan
 
 A possible estimator is
 
-\[
-\widehat{V}_t(q)=F_\theta\big(H(q),\operatorname{Retrieve}(\mathcal{H}_t,q),c_t\big),
-\]
+$$
+\widehat{V}_t(q)=F_\theta\big(H(q),operatorname{Retrieve}(\mathcal{H}_t,q),c_t\big),
+$$
 
 where \(F_\theta\) may be retrieval plus rules, a statistical ranker, a differential-tree model, or an LLM-based evaluator. Cross-domain reuse requires typed alignment and an explicit transfer uncertainty penalty or calibrated uncertainty estimate.
 
@@ -190,15 +190,15 @@ AQSI may begin without a single specified target question. This does **not** mea
 
 For a candidate set \(Q=\{q_1,\dots,q_n\}\), one baseline is the pairwise matrix
 
-\[
+$$
 M_{ij}=I_t(q_i\rightarrow q_j\mid c),\qquad M_{ii}=0,
-\]
+$$
 
 and the outgoing influence score
 
-\[
+$$
 S_{\mathrm{pair}}(q_i)=\sum_{j\neq i}M_{ij}.
-\]
+$$
 
 A reverse or bidirectional variant may be more appropriate for certain applications; the interpretation must be explicit. Historical question scores can provide a prior filter before the more expensive all-pairs stage. This can reduce resource expenditure on repeatedly unproductive questions.
 
@@ -210,10 +210,10 @@ A dense cluster of similar questions may dominate simple row sums. Suggested con
 
 A policy may select a subset \(P\subseteq Q\) under budget \(B\):
 
-\[
+$$
 P^*=\arg\max_{P\subseteq Q,\ C(P)\le B}
-\operatorname{Utility}_{\pi_t}(P\mid\mathcal{H}_t,G_t),
-\]
+operatorname{Utility}_{\pi_t}(P\mid\mathcal{H}_t,G_t),
+$$
 
 where \(\pi_t\) is a versioned governance policy. The utility is not presumed universal and should be made inspectable.
 
@@ -236,12 +236,12 @@ LLM-first discovery remains a complementary path. Both paths should generate the
 
 After exploration, AQSI should record not only an answer but also validated findings, unresolved residuals, unsuccessful transfers, newly discovered attributes, and successor questions. The feedback loop is:
 
-\[
+$$
 G_t,\mathcal{H}_t\rightarrow
 \text{Discover}\rightarrow\text{Score}\rightarrow\text{Explore}
 \rightarrow\text{Validate}\rightarrow\text{Relay}
 \rightarrow G_{t+1},\mathcal{H}_{t+1}.
-\]
+$$
 
 A downstream question may later generate value even when its parent question initially failed. Such delayed credit should use provenance-aware attribution and avoid counting the same result repeatedly through multiple ancestors.
 

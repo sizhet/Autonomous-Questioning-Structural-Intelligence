@@ -135,9 +135,9 @@ The operational layer executes only authorized exploration contracts (AQSI-006).
 
 A crucial invariant is:
 
-\[
-\operatorname{HighScore}(q)\;\not\Rightarrow\;\operatorname{Authorized}(q).
-\]
+$$
+operatorname{HighScore}(q)\;\not\Rightarrow\;operatorname{Authorized}(q).
+$$
 
 Likewise, a question outside the current funded portfolio is not necessarily unimportant; it may remain archived, unfunded, or eligible for later reconsideration.
 
@@ -183,23 +183,23 @@ The percentages are hypothetical examples, not recommended universal thresholds.
 
 AQSI-005 proposes goal-open question evaluation based on structural influence within a candidate ecology. For a candidate set \(Q\), an illustrative baseline is:
 
-\[
+$$
 S_{\mathrm{open}}(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j),
-\]
+$$
 
 where \(I\) is a directed, multi-granularity influence estimate. This score describes a hypothesized structural role, not verified scientific merit.
 
 A strategic policy \(\pi\) can be applied at the **eligibility and portfolio layers** without rewriting the definition of structural influence:
 
-\[
-Q_{\pi}=\{q\in Q:\operatorname{Eligible}(q,\pi)=1\},
-\]
+$$
+Q_{\pi}=\{q\in Q:operatorname{Eligible}(q,\pi)=1\},
+$$
 
-\[
-P^*\in\underset{P\subseteq Q_{\pi}}{\operatorname{argmax}}
+$$
+P^*\in\underset{P\subseteq Q_{\pi}}{operatorname{argmax}}
 \;U(P\mid\pi,\mathcal H,\mathcal E)
 \quad\text{subject to}\quad C_k(P,\pi)\le 0.
-\]
+$$
 
 Here \(\mathcal H\) is historical question intelligence, \(\mathcal E\) is current evidence, \(U\) is a declared, replaceable portfolio evaluator, and \(C_k\) are explicit constraints. This formulation allows multiple legitimate scoring strategies and prevents a strategic preference from being mistaken for an intrinsic truth about a question.
 
@@ -211,22 +211,22 @@ Strategic relevance cannot be reduced to a single keyword match between a questi
 
 Let a Question Unit \(q\) contain typed structural factors:
 
-\[
+$$
 X(q)=\{x_1,\ldots,x_m\},
-\]
+$$
 
 and let a strategic direction \(d\) contain policy-relevant factors:
 
-\[
+$$
 Y(d)=\{y_1,\ldots,y_n\}.
-\]
+$$
 
 An illustrative directed relevance estimator is:
 
-\[
-R(q\rightarrow d)=\operatorname{Fold}_{a,b}
+$$
+R(q\rightarrow d)=operatorname{Fold}_{a,b}
 \left[w_{ab}\,\rho(x_a\rightarrow y_b\mid\mathcal E,\tau)\right],
-\]
+$$
 
 where \(\tau\) denotes type and semantic alignment, potentially supported by Universal Typing and Naming (UTN). The fold may preserve separate dimensions rather than collapsing them into one number.
 
@@ -261,11 +261,11 @@ Potential indicators include:
 
 A proposed readiness record is a vector:
 
-\[
+$$
 B(d,t)=\bigl(b_{\mathrm{bottleneck}},b_{\mathrm{evidence}},
  b_{\mathrm{methods}},b_{\mathrm{validation}},b_{\mathrm{dependencies}},
  b_{\mathrm{uncertainty}}\bigr)_{d,t}.
-\]
+$$
 
 A scalar summary may be produced for a particular decision, but the underlying dimensions, missing values, and calibration status must remain accessible.
 
@@ -283,13 +283,13 @@ A practical SQCP must allocate finite resources. The portfolio should be evaluat
 
 An illustrative portfolio objective is:
 
-\[
+$$
 U(P)=\alpha V_{\mathrm{struct}}(P)
 +\beta V_{\mathrm{evidence}}(P)
 +\gamma V_{\mathrm{diversity}}(P)
 +\delta V_{\mathrm{relay}}(P)
 -\lambda C(P)-\mu R_{\mathrm{risk}}(P).
-\]
+$$
 
 All coefficients are declared policy parameters or model parameters, not universal constants. The terms should be separately reported to expose tradeoffs and prevent opaque score laundering.
 

@@ -46,11 +46,11 @@ A **Strategic Question Control Plane (SQCP)** governs the relationship between h
 
 For a candidate set \(Q = \{q_1, \ldots, q_n\}\), a baseline goal-open score is:
 
-\[
+$$
 S(q_i) = \sum_{j \ne i} I(q_i \rightarrow q_j)
-\]
+$$
 
-where \(I(q_i \rightarrow q_j)\) is an **estimated directional structural influence**, not a proven measure of scientific importance. In general, \(I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i)\). Influence can be estimated from multiple typed relations and folded using configurable operators; missing or unobserved relations must not automatically be interpreted as zero influence. Historical estimates, uncertainty, cost, diversity, and strategic constraints may affect subsequent portfolio selection.
+where $I(q_i \rightarrow q_j)$ is an **estimated directional structural influence**, not a proven measure of scientific importance. In general, \(I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i)\). Influence can be estimated from multiple typed relations and folded using configurable operators; missing or unobserved relations must not automatically be interpreted as zero influence. Historical estimates, uncertainty, cost, diversity, and strategic constraints may affect subsequent portfolio selection.
 
 ## Research Contributions Proposed for Evaluation
 

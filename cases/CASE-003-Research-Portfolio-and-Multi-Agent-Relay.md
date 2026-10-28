@@ -196,17 +196,17 @@ Let `h_i` denote an estimated historical potential score and `u_i` its uncertain
 
 For candidate questions `q_i` and `q_j`, define an estimated directed influence:
 
-\[
-I(q_i \rightarrow q_j) = \operatorname{Fold}_{a,b}\left(w_{ab}\,R(h_{ia},h_{jb})\right),
-\]
+$$
+I(q_i \rightarrow q_j) = operatorname{Fold}_{a,b}\left(w_{ab}\,R(h_{ia},h_{jb})\right),
+$$
 
 where `h_ia` and `h_jb` are typed factors, `R` is a contract-governed relation estimator, and the fold operator must declare how it treats unknown relations, dependencies, and evidence confidence. This is a **design family**, not a uniquely validated formula.
 
 A goal-open baseline is:
 
-\[
+$$
 S_{\mathrm{out}}(q_i)=\sum_{j\ne i}I(q_i\rightarrow q_j).
-\]
+$$
 
 The directional asymmetry matters: Q3 might inform Q1 more strongly than Q1 informs Q3. The raw sum is not necessarily a good portfolio objective, because it may reward correlated, redundant, or popular questions.
 
@@ -229,18 +229,18 @@ These numbers are neither measured relationships nor calibrated probabilities. T
 
 Let `x_i` indicate whether question `i` is funded, `c_i` its estimated cost, `b` the authorized budget, and `p` the current human policy. One possible research objective is:
 
-\[
+$$
 \max_{x}\; \sum_i x_i V_i
 +\lambda\sum_{i\ne j}x_i x_j C_{ij}
 -\mu\sum_{i\ne j}x_i x_j D_{ij}
 +\nu\,\mathrm{Coverage}(x),
-\]
+$$
 
 subject to:
 
-\[
+$$
 \sum_i c_i x_i \le b,\qquad x\in\mathcal{F}(p).
-\]
+$$
 
 Here `V_i` is a policy-compatible, evidence-aware estimate of question value; `C_ij` is a complementarity estimate; `D_ij` is a redundancy estimate; and `F(p)` is the policy-feasible set. These terms must be defined and calibrated before operational use. The objective must not double-count the same influence evidence in `V`, `C`, and `Coverage`.
 

@@ -71,9 +71,9 @@ This paper specifies the interface between **selection** and **exploration**, as
 
 Let a Question Unit at revision `r` be:
 
-\[
+$$
 QU_i^{(r)} = (ID, T, C, X, P, H, E, S, L, G, V)
-\]
+$$
 
 where:
 
@@ -135,15 +135,15 @@ The representation should distinguish a known relation from a hypothesized one, 
 
 An influence record can be represented as:
 
-\[
+$$
 R_{ab}^{(p)}=(h_a,h_b,\rho,p,\hat w,u,e)
-\]
+$$
 
 where `h_a` and `h_b` are typed structural factors, `ρ` is the proposed relation, `p` is the evaluation perspective, `ŵ` is an estimated influence, `u` is uncertainty, and `e` identifies supporting evidence. In general:
 
-\[
+$$
 I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i).
-\]
+$$
 
 The QU must preserve the factor-level trace needed to explain aggregated scores. A folded score alone is insufficient for reproducible relay.
 
@@ -297,9 +297,9 @@ Each record should include provenance, method, scope, uncertainty, and whether i
 
 The outcome of an exploration is not merely `answer: string`. A proposed result envelope is:
 
-\[
+$$
 ER = (QU\_ref, EC\_ref, M, O, E^+, E^-, U, R, D)
-\]
+$$
 
 where `M` is method/executor metadata, `O` is observations, `E+` and `E−` are supporting and counter evidence, `U` is uncertainty and leftover, `R` is relay proposals, and `D` is governance/audit decisions.
 
@@ -320,9 +320,9 @@ AQSI-004 proposes historical question records and Question Differential Trees. Q
 
 A history record should distinguish:
 
-\[
+$$
 \text{Outcome} = \text{EpistemicResult} \times \text{OperationalResult} \times \text{RelayResult}.
-\]
+$$
 
 A failed experiment can still yield valuable counter-evidence or a high-value descendant question. Conversely, a fluent answer with no independent evidence may provide little validated knowledge. Scoring systems should preserve these dimensions rather than collapse them into an unqualified success/failure label.
 

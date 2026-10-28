@@ -55,9 +55,9 @@ Develop replaceable factor scorers over concept, attribute, method, constraint, 
 
 For questions \(q_i\) and \(q_j\), a proposed directional influence model is:
 
-\[
-I(q_i\!\rightarrow\!q_j)=\operatorname{Fold}_{a,b}\bigl(w_{ab}\,R(h_{ia},h_{jb})\bigr),
-\]
+$$
+I(q_i\!\rightarrow\!q_j)=operatorname{Fold}_{a,b}\bigl(w_{ab}\,R(h_{ia},h_{jb})\bigr),
+$$
 
 where \(h_{ia}\) and \(h_{jb}\) are heterogeneous structural factors, \(R\) is a typed relation evaluator, and the folding operator is explicitly specified. In general, \(I(q_i\!\rightarrow\!q_j)\neq I(q_j\!\rightarrow\!q_i)\).
 
@@ -93,9 +93,9 @@ Test selection-bias corrections, uncertainty-aware exploration, and cold-start p
 
 Evaluate the proposed pairwise influence baseline:
 
-\[
+$$
 S(q_i)=\sum_{j\ne i}I(q_i\!\rightarrow\!q_j).
-\]
+$$
 
 This is a candidate ranking rule, not a universal objective. Investigate sensitivity to portfolio size, graph density, score calibration, question duplication, and asymmetric influence.
 

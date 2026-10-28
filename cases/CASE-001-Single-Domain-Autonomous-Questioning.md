@@ -93,9 +93,9 @@ A candidate is not promoted merely because it sounds novel. It must have a coher
 
 Each question may be associated with heterogeneous structural factors:
 
-\[
+$$
 X(q)=\{(t_k, v_k, c_k, p_k)\}_{k=1}^{m}
-\]
+$$
 
 where `t` denotes a UTN-compatible factor type, `v` its value or reference, `c` its context, and `p` its provenance. This is a proposed representation, not a universal ontology.
 
@@ -114,9 +114,9 @@ For Q-02, factors include mutable fixture identity, test dependency edges, resou
 
 Investigating shared fixtures (Q-02) might help interpret worker-count effects (Q-01), but observing worker-count correlation alone may not identify which fixture is responsible. Therefore:
 
-\[
+$$
 I(Q\text{-}02\rightarrow Q\text{-}01)\ne I(Q\text{-}01\rightarrow Q\text{-}02)
-\]
+$$
 
 Both values are estimates under an explicit context. An unmeasured edge remains **unknown**, not automatically zero.
 
@@ -134,9 +134,9 @@ A historical scorer may estimate whether Q-02 resembles H-03 structurally and wh
 
 A proposed screening function is:
 
-\[
+$$
 \widehat V(q)=F_{\theta}(X(q),\mathcal H,\mathcal C)
-\]
+$$
 
 where `H` is the versioned history and `C` is current research context. The scorer returns a value estimate **and** confidence or uncertainty metadata. A candidate with little historical coverage may receive an exploration allocation rather than an unjustified rejection.
 
@@ -166,26 +166,26 @@ For illustration, let `I(i → j)` denote an estimated influence of resolving qu
 
 A simple goal-open baseline is:
 
-\[
+$$
 S(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j)
-\]
+$$
 
 This yields illustrative outgoing sums of `1.1`, `1.6`, `0.6`, and `1.3` for Q-01 through Q-04, respectively. The baseline is intentionally simple and does not imply that a high outgoing score is scientifically valuable.
 
 A practical selector also considers historical estimates, evidence quality, uncertainty, cost, coverage, diversity, and policy constraints. One **illustrative** portfolio objective is:
 
-\[
+$$
 \max_{P\subseteq Q}\left[\sum_{q\in P}\widehat V(q)
-+\lambda\,\operatorname{Coverage}(P)
--\mu\,\operatorname{Redundancy}(P)\right]
-\]
++\lambda\,operatorname{Coverage}(P)
+-\mu\,operatorname{Redundancy}(P)\right]
+$$
 
 subject to:
 
-\[
-\sum_{q\in P}\operatorname{Cost}(q)\le B,
+$$
+\sum_{q\in P}operatorname{Cost}(q)\le B,
 \qquad P\text{ satisfies policy constraints.}
-\]
+$$
 
 This objective is a candidate design, not a validated optimal formulation. If Q-01 and Q-02 largely overlap in their required data collection, selecting both may still be beneficial, but shared cost and evidence dependencies should be explicitly modeled rather than counted twice.
 

@@ -114,9 +114,9 @@ The domains have distinct failure semantics. CI tests are designed to return exp
 
 Represent a question family as:
 
-\[
+$$
 Q = \langle C,\Delta_D,\Gamma_D\rangle,
-\]
+$$
 
 where \(C\) is a reusable structural core, \(\Delta_D\) is the domain-specific delta, and \(\Gamma_D\) records constraints and exclusions.
 
@@ -155,10 +155,10 @@ A conformant comparison holds retrieval access, exploration budget, and target-d
 
 Let \(H(q)\) denote typed factors of a question. A directional relation score may be defined as:
 
-\[
-I(q_i\rightarrow q_j)=\operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
+$$
+I(q_i\rightarrow q_j)=operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \left[w_{ab}\,R_{ab}(a\rightarrow b)\right].
-\]
+$$
 
 Here \(R_{ab}\) represents a proposed directional influence relationship; \(w_{ab}\) and the folding operator are versioned, replaceable components. An evidence state and uncertainty interval should accompany the numerical estimate. Generally, \(I(q_i\rightarrow q_j)\ne I(q_j\rightarrow q_i)\).
 
@@ -188,9 +188,9 @@ The illustrative numbers are not comparable without defined calibration, confide
 
 Under goal-open selection, a question may be ranked by its directional influence on other candidate questions:
 
-\[
+$$
 S(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j).
-\]
+$$
 
 A portfolio may also consider diversity, cost, information gain, dependencies, and uncertainty. A Strategic Question Control Plane may prioritize environmental monitoring reliability without dictating each specific question. Policy priority must remain distinct from evidence of truth.
 

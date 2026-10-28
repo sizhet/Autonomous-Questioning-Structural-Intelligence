@@ -57,15 +57,15 @@ No claim is made that the proposed scoring function already predicts discoveries
 
 Let the current candidate pool be
 
-\[
+$$
 Q_t = \{q_1,\ldots,q_n\}.
-\]
+$$
 
 A candidate question is represented as a typed Question Unit or a provisional Question Candidate:
 
-\[
+$$
 q_i = (\mathrm{id}_i, X_i, P_i, E_i, H_i, C_i, L_i),
-\]
+$$
 
 where:
 
@@ -78,17 +78,17 @@ where:
 
 A structural description is a collection of typed factors:
 
-\[
+$$
 X_i = \{(x_{ia},\tau_{ia},\rho_{ia})\}_{a=1}^{m_i},
-\]
+$$
 
 where \(\tau\) is a UTN-aligned type and \(\rho\) carries context, granularity, and provenance. A factor may represent a concept, method, measurement, missing relation, assumption, failure mode, evidence item, or prospective transfer point.
 
 An **influence estimate** between questions is a structured object, not just a number:
 
-\[
+$$
 \widehat{I}_{ij} = (\mu_{ij}, U_{ij}, Z_{ij}, V_{ij}),
-\]
+$$
 
 where \(\mu_{ij}\) is estimated directional effect, \(U_{ij}\) its uncertainty, \(Z_{ij}\) its supporting factor/evidence trace, and \(V_{ij}\) the estimator and calibration version. Missing estimates are explicitly marked `unknown`.
 
@@ -98,9 +98,9 @@ where \(\mu_{ij}\) is estimated directional effect, \(U_{ij}\) its uncertainty, 
 
 For factors \(x_{ia}\) and \(x_{jb}\), define a typed directional relationship operator:
 
-\[
+$$
 r_{ab}^{i\to j} = R_{\theta}(x_{ia},x_{jb}\mid\tau_{ia},\tau_{jb},c_t).
-\]
+$$
 
 The operator may use explicit rules, structural matching, historical retrieval, learned estimators, LLM-assisted judgments, or mixtures. Its output includes estimated magnitude, sign, confidence, and evidence trace. Relation types might include `enables`, `constrains`, `contradicts`, `shares-method`, `provides-evidence`, `exposes-gap`, and `transfers-to`.
 
@@ -108,18 +108,18 @@ The operator may use explicit rules, structural matching, historical retrieval, 
 
 A configurable folding operator combines the typed factors:
 
-\[
+$$
 \widehat{I}(q_i\to q_j)
-=\operatorname{Fold}_{\phi}\left(\{w_{ab}^{i\to j}r_{ab}^{i\to j}\}_{a,b}\right).
-\]
+=operatorname{Fold}_{\phi}\left(\{w_{ab}^{i\to j}r_{ab}^{i\to j}\}_{a,b}\right).
+$$
 
 The fold must preserve, or explicitly document the loss of, direction, uncertainty, provenance, negative evidence, and unknown factors. A sum is one possible fold, not the universal choice. Alternative folds may be robust, sparse, thresholded, or perspective-aware. Their semantics must be defined in SPEC-002.
 
 In general,
 
-\[
+$$
 \widehat{I}(q_i\to q_j)\ne\widehat{I}(q_j\to q_i).
-\]
+$$
 
 For example, a question about the reliability of an experimental measurement may influence several downstream hypotheses, while each downstream hypothesis contributes little to resolving the measurement question.
 
@@ -129,11 +129,11 @@ Positive influence may mean enabling or improving the expected investigation of 
 
 Accordingly, retain separate channels when needed:
 
-\[
+$$
 \widehat{I}_{ij}^{\mathrm{enable}},\quad
 \widehat{I}_{ij}^{\mathrm{challenge}},\quad
 \widehat{I}_{ij}^{\mathrm{transfer}}.
-\]
+$$
 
 A configured perspective may combine these channels, but the underlying evidence should remain inspectable. This avoids a false cancellation of important positive and negative signals.
 
@@ -141,9 +141,9 @@ A configured perspective may combine these channels, but the underlying evidence
 
 The original AQSI baseline scores a question by its directional impact on the other candidate questions:
 
-\[
+$$
 S_{\mathrm{out}}(q_i;Q_t)=\sum_{j\ne i}\widehat{I}(q_i\to q_j).
-\]
+$$
 
 This is an interpretable starting point: it does not require choosing a single target question. However, it has limitations. A larger candidate pool mechanically increases score magnitude, redundant questions can inflate scores, and missing relations can be mistaken for low value.
 
@@ -151,19 +151,19 @@ This is an interpretable starting point: it does not require choosing a single t
 
 A weighted average is:
 
-\[
+$$
 S_{\mathrm{avg}}(q_i)=
 \frac{\sum_{j\ne i}a_j\widehat{I}(q_i\to q_j)}
 {\sum_{j\ne i}a_j},
-\]
+$$
 
 where \(a_j\) expresses an explicitly governed importance or sampling weight. This is defined only over eligible, estimated edges, with a separate coverage report. If the denominator is zero, the score is *undefined*, not zero.
 
 A coverage statistic is:
 
-\[
+$$
 \kappa_i=\frac{|\{j\ne i:\widehat{I}_{ij}\text{ estimated}\}|}{n-1},
-\]
+$$
 
 for \(n>1\). Coverage should accompany scores, not automatically become an arbitrary score bonus.
 
@@ -171,9 +171,9 @@ for \(n>1\). Coverage should accompany scores, not automatically become an arbit
 
 Some questions affect others through multi-hop dependencies. For a suitably normalized influence operator \(A\), one candidate extension is:
 
-\[
+$$
 S_{\mathrm{reach}}(q_i)=\sum_{k=1}^{K}\lambda_k\sum_j(A^k)_{ij}.
-\]
+$$
 
 This is exploratory. Repeated paths may double-count the same underlying evidence, and signed or uncertain edges complicate interpretation. A practical MVP should begin with direct edges and evaluate multi-hop extensions separately.
 
@@ -185,19 +185,19 @@ A target-free baseline is not appropriate when a binding safety constraint, lega
 
 Let historical records be
 
-\[
+$$
 \mathcal{H}_t=\{(q_h,X_h,A_h,O_h,R_h,T_h)\},
-\]
+$$
 
 where \(A_h\) records the decision to explore or defer, \(O_h\) the observed result, \(R_h\) the subsequent relay value, and \(T_h\) the observation horizon.
 
 A historical estimator can produce a vector of predicted outcomes:
 
-\[
+$$
 \widehat{Y}_i=F_{\psi}(X_i,\mathcal{H}_t)
 =(\widehat{y}_{\mathrm{yield}},\widehat{y}_{\mathrm{relay}},
 \widehat{y}_{\mathrm{cost}},\widehat{u}_{\mathrm{hist}}).
-\]
+$$
 
 These are predictions, not observed facts. Historical similarity should be typed and multi-granular, including shared methods, evidence patterns, failed assumptions, and transfer relations, rather than only text embedding similarity.
 
@@ -205,11 +205,11 @@ These are predictions, not observed facts. Historical similarity should be typed
 
 Historical observations may already contribute to structural edge estimates. A naive sum of structural and historical scores can count the same evidence twice. AQSI therefore proposes an **evidence-aware fusion contract**:
 
-\[
-\widehat{V}_i=\operatorname{Fuse}_{\eta}
+$$
+\widehat{V}_i=operatorname{Fuse}_{\eta}
 \big(S_{\mathrm{out}}(q_i),\widehat{Y}_i,
 \mathcal{E}_i,\mathcal{D}_i\big),
-\]
+$$
 
 where \(\mathcal{E}_i\) tracks evidence lineage and \(\mathcal{D}_i\) records dependencies between estimators. A simple weighted combination is allowed only when its calibration and overlap assumptions are documented.
 
@@ -223,22 +223,22 @@ Delayed downstream value must be attributed cautiously. A question that precedes
 
 Let \(P\subseteq Q_t\) be the selected portfolio and \(B\) the available budget. A generic constrained objective is:
 
-\[
+$$
 \max_{P\subseteq Q_t}\;F(P\mid\pi_t,\mathcal H_t)
 \quad\text{subject to}\quad
 \sum_{q_i\in P}c_i\le B,\;P\in\mathcal A(\pi_t),
-\]
+$$
 
 where \(\pi_t\) is an authorized policy and \(\mathcal A(\pi_t)\) is its admissible portfolio family.
 
 One *illustrative*, non-canonical decomposition is:
 
-\[
+$$
 F(P)=\sum_{i\in P}\widehat{V}_i
--\alpha\operatorname{Redundancy}(P)
-+\beta\operatorname{Coverage}(P)
-+\gamma\operatorname{Complementarity}(P).
-\]
+-\alpha\ operatorname{Redundancy}(P)
++\beta operatorname{Coverage}(P)
++\gamma operatorname{Complementarity}(P).
+$$
 
 The coefficients are governed configuration choices, not empirically established constants. The decomposition is only valid if its terms have compatible semantics and overlapping evidence is handled. More principled alternatives include multi-objective Pareto selection, submodular coverage, and constrained bandit policies.
 

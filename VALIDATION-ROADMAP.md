@@ -44,9 +44,9 @@ A **research episode** begins with a frozen candidate set and ends at a prespeci
 
 Define, for evaluation window \(T\):
 
-\[
-\operatorname{VRY}(T)=\frac{\sum_{k\in \mathcal{V}(T)} w_k\,c_k}{\operatorname{Cost}(T)}
-\]
+$$
+operatorname{VRY}(T)=\frac{\sum_{k\in \mathcal{V}(T)} w_k\,c_k}{operatorname{Cost}(T)}
+$$
 
 Here \(\mathcal{V}(T)\) is the set of independently assessed research outputs meeting prespecified acceptance criteria, \(w_k\) is an ex-ante importance weight, and \(c_k\) is a confidence or quality weight assigned by blinded adjudication. Cost must be reported in both compute/tool consumption and human-review effort. This is a **candidate operational metric**, not a universal measure of intelligence; report its components separately to expose weighting sensitivity.
 

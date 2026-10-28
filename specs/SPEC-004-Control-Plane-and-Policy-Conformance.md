@@ -119,9 +119,9 @@ Let a candidate exploration action be `a`, a Question Unit be `q`, and a governi
 
 Define a decision function:
 
-\[
+$$
 D(a,q,P,C) \in \{\mathrm{allow},\mathrm{deny},\mathrm{defer},\mathrm{escalate}\},
-\]
+$$
 
 where `C` is the current authorization and resource context. The decision function MUST evaluate hard constraints and delegation boundaries before optional utility optimization. It MUST NOT transform missing authorization into an implicit allow.
 
@@ -135,9 +135,9 @@ A strategic policy MAY specify a direction such as “prioritize reproducible ex
 
 Question value and strategic alignment SHOULD be kept as separate dimensions:
 
-\[
+$$
 V(q) = \bigl(V_{\mathrm{structural}}(q),\;V_{\mathrm{historical}}(q),\;A(q,P),\;U(q),\;C(q)\bigr),
-\]
+$$
 
 where `A` is policy alignment, `U` uncertainty, and `C` estimated cost. A portfolio rule may fold these dimensions under a versioned policy, but the original components SHOULD remain inspectable. No single numerical score constitutes an authorization.
 
@@ -147,10 +147,10 @@ A portfolio selector SHOULD consider budget feasibility, candidate dependencies,
 
 For selected set `X`, a generic proposed optimization is:
 
-\[
+$$
 \max_{X \subseteq Q}\;F_P(X)\quad\text{subject to}\quad
 \sum_{q\in X} c_k(q) \le B_k\quad \forall k,
-\]
+$$
 
 with policy-specific objective `F_P`, resource types `k`, and budgets `B_k`. The formula is a modeling template; its adequacy is a testable hypothesis. Costs that are unknown MUST be represented as estimates or unknowns rather than assumed zero.
 

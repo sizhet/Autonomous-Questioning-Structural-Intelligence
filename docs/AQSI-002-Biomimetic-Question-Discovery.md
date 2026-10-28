@@ -86,9 +86,9 @@ A **residual** is the unresolved remainder of a comparison, prediction, attempte
 
 A simple representation is:
 
-\[
-\rho_t = \operatorname{Compare}(\text{expected}_t,\text{observed}_t,\text{context}_t).
-\]
+$$
+\rho_t = operatorname{Compare}(\text{expected}_t,\text{observed}_t,\text{context}_t).
+$$
 
 The residual need not be numeric. It may be a failed test, a contradictory claim, an unhandled case, or a capability shortfall.
 
@@ -110,9 +110,9 @@ Candidate units include concepts, attributes, elements, features, methods, const
 
 Let a domain structure contain typed units \(U=\{u_1,\ldots,u_m\}\) and typed, evidence-bearing relationships \(E\). A candidate cross-domain relation is:
 
-\[
- r=(u_a,\operatorname{relation\_type},u_b,\operatorname{direction},e,c),
-\]
+$$
+ r=(u_a,operatorname{relation\_type},u_b,operatorname{direction},e,c),
+$$
 
 where \(e\) identifies supporting or contradicting evidence and \(c\) expresses confidence or an explicitly unknown state. The relation may be asymmetric.
 

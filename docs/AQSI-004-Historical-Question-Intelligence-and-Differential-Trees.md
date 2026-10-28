@@ -127,17 +127,17 @@ A **Question Differential Tree** represents a family of related questions throug
 
 Let a question have a structural representation:
 
-\[
+$$
 X(q) = (C,A,M,H,E,R,P)
-\]
+$$
 
 where \(C\) denotes concepts, \(A\) attributes, \(M\) methods, \(H\) assumptions/hypotheses, \(E\) evidence, \(R\) residuals, and \(P\) perspective or policy context. These components may themselves be structured and multi-granular.
 
 For a question family with core \(X_0\), a variant is represented as:
 
-\[
-X(q_i) = \operatorname{Apply}(X_0,\Delta_i)
-\]
+$$
+X(q_i) = operatorname{Apply}(X_0,\Delta_i)
+$$
 
 Here \(\Delta_i\) is a typed set of edits, not necessarily numeric subtraction.
 
@@ -188,9 +188,9 @@ UTN supplies addressability and candidate type mappings; it does not guarantee s
 
 A method previously useful for question \(q_i\) may help question \(q_j\), even if the reverse transfer is not plausible. Thus, in general:
 
-\[
+$$
 I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i)
-\]
+$$
 
 A directional score can combine relation type, granularity, historical evidence, and current feasibility through a configurable folding operator. Its exact form is a testable design choice, not a universal law.
 
@@ -200,17 +200,17 @@ A directional score can combine relation type, granularity, historical evidence,
 
 Let historical experience at time \(t\) be:
 
-\[
+$$
 \mathcal{H}_t = \{(X_i,\hat{s}_i,y_i,c_i,\pi_i,\tau_i)\}_{i=1}^{N_t}
-\]
+$$
 
 where \(X_i\) is a structured question, \(\hat{s}_i\) its pre-exploration estimate, \(y_i\) the observed validated outcome, \(c_i\) cost, \(\pi_i\) selection policy, and \(\tau_i\) observation time.
 
 A learned evaluator estimates:
 
-\[
+$$
 \hat{V}_t(q\mid p,b)=F_{\theta_t}(X(q),\mathcal{H}_t,p,b)
-\]
+$$
 
 where \(p\) is the current policy and \(b\) the available budget. \(F\) may be a retrieval-based estimator, rules engine, differential tree, statistical model, LLM-assisted evaluator, or ensemble.
 
@@ -256,9 +256,9 @@ The aim is to reduce wasted exploration, **not** to guarantee that the system ne
 
 For an ongoing exploration, define an estimated marginal value of another step:
 
-\[
+$$
 \Delta \hat V_t(q,k)=\mathbb{E}[V_{k+1}-V_k\mid\mathcal{H}_t]
-\]
+$$
 
 A possible stopping rule is to pause when the expected incremental benefit falls below a policy-defined resource threshold, subject to uncertainty and minimum exploration requirements. Such estimates may be wrong; a pause should create a revisit condition, not erase the question.
 
@@ -283,9 +283,9 @@ Some questions produce little immediate value but lead to important downstream r
 
 A provisional model is:
 
-\[
+$$
 V_{\mathrm{total}}(q)=V_{\mathrm{direct}}(q)+\lambda V_{\mathrm{downstream}}(q)
-\]
+$$
 
 The terms must be operationally defined on comparable scales. Downstream credit requires provenance and an attribution method that avoids double counting across multiple parents. Candidate approaches include bounded-depth attribution, discounted contribution, and counterfactual ablations.
 
@@ -307,17 +307,17 @@ AQSI may operate without a single externally specified target question. This doe
 
 A baseline group score is:
 
-\[
+$$
 S_{\mathrm{group}}(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j)
-\]
+$$
 
 This can be compared with a history-conditioned score \(\hat V_t(q_i)\). One experimental fusion is:
 
-\[
-S(q_i)=\operatorname{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
-\]
+$$
+S(q_i)=operatorname{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
+$$
 
-where \(U_t\) represents uncertainty or unexplored potential and \(\operatorname{Fold}_p\) is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
+where \(U_t\) represents uncertainty or unexplored potential and \(operatorname{Fold}_p\) is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
 
 A portfolio selector should also consider diversity, dependency, shared cost, and budget. Otherwise densely connected, well-studied question clusters may dominate frontier candidates.
 

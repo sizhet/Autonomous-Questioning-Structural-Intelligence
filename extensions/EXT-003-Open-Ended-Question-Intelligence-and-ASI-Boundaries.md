@@ -78,21 +78,21 @@ A system may reach OE-3 in a narrow setting and fail OE-2 elsewhere. Progression
 
 ## 4. Question ecosystems as evolving structural objects
 
-Let the question ecosystem at cycle \(t\) be
+Let the question ecosystem at cycle $t$ be
 
-\[
+$$
 \mathcal E_t=(Q_t,F_t,R_t,H_t,C_t,P_t),
-\]
+$$
 
-where \(Q_t\) is the Question Unit set; \(F_t\) the multi-granularity structural factors; \(R_t\) typed, directed relations; \(H_t\) historical outcomes and evaluations; \(C_t\) exploration contracts; and \(P_t\) applicable policies and budgets.
+where $Q_t$ is the Question Unit set; $F_t$ the multi-granularity structural factors; $R_t$ typed, directed relations;$H_t$ historical outcomes and evaluations; $C_t$ exploration contracts; and $P_t$ applicable policies and budgets.
 
 The ecosystem evolves through candidate discovery, question derivation, evidence updates, relays, merges, revisits, and retirement or deferral. **Retirement does not imply deletion**: negative outcomes and unresolved residuals remain available for historical retrieval and future reinterpretation.
 
 A useful growth measure must discount duplicate, unsupported, and semantically empty expansion. For example, define an illustrative *verified structural contribution* over a window \(W\):
 
-\[
+$$
 G_W = \sum_{r\in \mathcal R_W} w(r)\,v(r) - \lambda D_W - \mu K_W,
-\]
+$$
 
 where \(\mathcal R_W\) are relay contributions, \(v(r)\) is an independently evaluated value, \(D_W\) is measured redundancy, and \(K_W\) is resource cost. The weights and evaluation protocol must be declared before experiments. This is a proposed metric family, not a universal intelligence equation.
 
@@ -102,12 +102,12 @@ Question relationships may connect concepts, attributes, methods, constraints, o
 
 For a question \(q_i\), let \(F(q_i)=\{f_{i1},\ldots,f_{im}\}\) be typed factors. A directed influence estimate can be expressed as
 
-\[
+$$
 \widehat I(q_i\rightarrow q_j)=
-\operatorname{Fold}_{a,b,k}\!\left[
+operatorname{Fold}_{a,b,k}\!\left[
  w_{abk}\,R_k(f_{ia},f_{jb})\mid E_{abk},U_{abk}
 \right],
-\]
+$$
 
 where \(R_k\) denotes a typed relationship, \(E\) evidence, \(U\) uncertainty, and the folding operator is configurable and auditable. In general, \(\widehat I(q_i\rightarrow q_j)\ne\widehat I(q_j\rightarrow q_i)\).
 
@@ -119,9 +119,9 @@ Historical Question Intelligence (HQI) stores questions, structures, outcomes, c
 
 An illustrative candidate assessment is:
 
-\[
+$$
 V_t(q)=\alpha H_t(q)+\beta I_t(q)+\gamma U_t(q)+\delta L_t(q)-\eta C_t(q),
-\]
+$$
 
 where \(H\) estimates historical relevance, \(I\) structural influence, \(U\) uncertainty-sensitive exploratory potential, \(L\) anticipated relay contribution, and \(C\) cost. This formula is an example of a policy-configurable scoring family, **not** a requirement to combine all factors into a fixed additive score. Multi-granularity factor folding may already encode many of these signals; implementations must prevent double counting.
 
@@ -133,9 +133,9 @@ To limit history-induced lock-in, a portfolio can reserve explicit resources for
 
 A basic ecosystem score may be
 
-\[
+$$
 S(q_i)=\sum_{j\ne i}\widehat I(q_i\rightarrow q_j),
-\]
+$$
 
 subject to normalization, uncertainty handling, coverage, and a declared population of candidate questions. High outgoing influence is not equivalent to scientific truth, breakthrough probability, or authorization.
 

@@ -55,9 +55,9 @@ A **Question Unit** is a versioned research object with identity, typed structur
 
 At time \(t\), let:
 
-\[
+$$
 \mathcal E_t=(Q_t,F_t,R_t,H_t,P_t,C_t),
-\]
+$$
 
 where:
 
@@ -90,9 +90,9 @@ An ecosystem change may modify question relations, factor types, historical mode
 
 A question's structural signature can be modeled as:
 
-\[
+$$
 X(q)=\{(f_k,\tau_k,g_k,p_k,e_k)\}_{k=1}^{m_q},
-\]
+$$
 
 where \(f_k\) is a factor, \(\tau_k\) its UTN-compatible type, \(g_k\) its granularity, \(p_k\) its provenance, and \(e_k\) its evidence or uncertainty metadata.
 
@@ -115,17 +115,17 @@ These relations should not be collapsed into an undifferentiated similarity edge
 
 A candidate influence estimate may take the form:
 
-\[
+$$
 \widehat I_t(q_i\!\to\!q_j)=
-\operatorname{Fold}_{(a,b)\in\mathcal A_{ij}}
+operatorname{Fold}_{(a,b)\in\mathcal A_{ij}}
 \bigl[w_{ab,t}\,r_t(f_{ia},f_{jb})\bigr],
-\]
+$$
 
 where \(\mathcal A_{ij}\) is an admissible set of typed factor pairs, \(r_t\) estimates a relation, and `Fold` is an explicitly versioned operator. Its output must carry a scale, uncertainty, provenance, and evidence-dependence metadata. In general:
 
-\[
+$$
 \widehat I_t(q_i\!\to\!q_j)\neq\widehat I_t(q_j\!\to\!q_i).
-\]
+$$
 
 This estimate is **not** a direct measure of verified scientific importance. Calibration must be tested against independent downstream outcomes.
 
@@ -141,9 +141,9 @@ An event should record actor, time, version, source, authorization context, and 
 
 A family of questions can share a structural core and differ in domain-specific deltas:
 
-\[
-q_k=\operatorname{Instantiate}(\mathrm{Core}_{\mathcal F},\Delta_k).
-\]
+$$
+q_k=operatorname{Instantiate}(\mathrm{Core}_{\mathcal F},\Delta_k).
+$$
 
 QDTs can expose repeated dead ends, useful refinements, untested branches, and transferable methods. A tree is one view of a richer ecosystem: a question may participate in multiple overlapping families, and cross-family relations need not be tree-shaped.
 
@@ -212,9 +212,9 @@ The levels are relative to a given research objective, not a fixed ontology. Unr
 
 Let a historical record include:
 
-\[
+$$
 h_i=(q_i,X_i,\widehat s_i,o_i,c_i,d_i,v_i),
-\]
+$$
 
 where \(\widehat s_i\) is a prior score, \(o_i\) the observed outcome, \(c_i\) exploration cost, \(d_i\) descendant/relay effects, and \(v_i\) evaluation context and version.
 
@@ -232,9 +232,9 @@ Store rejected/deferred candidates and selection propensities where feasible. Us
 
 For a candidate pool \(Q\), a goal-open baseline is:
 
-\[
+$$
 S_{\mathrm{influence}}(q_i)=\sum_{q_j\in Q,\,j\neq i}\widehat I(q_i\!\to\!q_j).
-\]
+$$
 
 This is a structural heuristic, not a universal measure of research merit. Scores may be biased by pool size, graph density, or duplicated question families.
 
@@ -256,11 +256,11 @@ Multi-dimensional records support alternative folding policies and make evaluato
 
 Given budget \(B\), choose an authorized set \(P\subseteq Q\):
 
-\[
+$$
 \max_{P}\; U(P\mid\mathcal E_t,\pi_t)
 \quad\text{subject to}\quad
 \sum_{q\in P}c(q)\le B,\quad P\in\mathcal C(\pi_t),
-\]
+$$
 
 where \(\pi_t\) is the human-authorized policy and \(\mathcal C\) its admissible portfolios. The objective may account for complementarity, redundancy, uncertainty, and portfolio diversity, with all weights and versions recorded. A high score never grants execution authority.
 

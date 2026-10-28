@@ -147,17 +147,16 @@ Operators should be replaceable, composable, and subject to conformance tests. A
 
 Let a Question Unit contain a heterogeneous set of typed structural facets:
 
-\[
+$$
 H(q_i)=\{h_{i1},\ldots,h_{im_i}\}.
-\]
+$$
 
 A directed influence estimate from question \(q_i\) to \(q_j\) can be expressed as:
 
-\[
-I(q_i\!\rightarrow\!q_j)
-=\operatorname{Fold}_{a,b,r}
+$$
+I(q_i\!\rightarrow\!q_j)=operatorname{Fold}_{a,b,r}
 \left(w_{abr}\,R_r(h_{ia},h_{jb})\right),
-\]
+$$
 
 where \(R_r\) is a typed relation scorer and \(w_{abr}\) is a context-dependent weight. This extends beyond concept-to-concept association to methods, constraints, evidence, assumptions, failures, and potential transfer points. Direction matters: a technique from question A may help question B without the reverse being true.
 
@@ -165,11 +164,11 @@ where \(R_r\) is a typed relation scorer and \(w_{abr}\) is a context-dependent 
 
 A relay candidate may be ranked by expected benefit, evidence strength, transfer risk, and cost. For example:
 
-\[
+$$
 U(r\mid\mathcal H,\pi)
 =\mathbb E[\Delta V(r)\mid\mathcal H]
 -\lambda C(r)-\mu T(r),
-\]
+$$
 
 where \(\mathcal H\) is historical evidence, \(\pi\) is an authorized policy, \(C\) is resource cost, and \(T\) is semantic or operational transfer risk. This equation is a **candidate objective**, not an established empirical law. Alternative evaluators and non-scalar Pareto selection should remain possible.
 
@@ -243,9 +242,9 @@ A question can contribute to several later discoveries, and several questions ca
 
 Question Differential Trees (QDTs) can represent shared cores and structured differences among question variants:
 
-\[
-q_k = \operatorname{Instantiate}(\mathrm{Core},\Delta_k,\mathrm{Context}_k).
-\]
+$$
+q_k = operatorname{Instantiate}(\mathrm{Core},\Delta_k,\mathrm{Context}_k).
+$$
 
 Relay may operate at the family level: a reusable method learned for a common core can inform several variants, while an exception discovered in one branch can constrain a narrower subset. Compression should preserve the information necessary to recover validity boundaries, provenance, and uncertainty. A compact representation that erases counterexamples is not an acceptable research relay.
 
@@ -257,11 +256,11 @@ Historical Question Intelligence (HQI) stores the consequences of relay: not onl
 
 A proposed time-dependent outcome model is:
 
-\[
+$$
 V_t(q)=V_t^{\mathrm{direct}}(q)
 +\alpha\,V_t^{\mathrm{relay}}(q)
 -\beta\,C_t(q),
-\]
+$$
 
 where relay value is estimated from downstream contributions with explicit attribution limits. **This is a bookkeeping proposal, not a claim that all downstream benefit can be causally assigned.** Multiple ancestors, delayed outcomes, selective exploration, and changing evaluation criteria make attribution difficult.
 

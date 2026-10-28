@@ -69,9 +69,9 @@ The table is intentionally pluralistic: an LLM, graph model, rule system, databa
 
 Let the research system at time \(t\) be a typed graph:
 
-\[
+$$
 \mathcal{G}_t=(\mathcal{V}_t,\mathcal{E}_t,\mathcal{C}_t,\mathcal{P}_t),
-\]
+$$
 
 where \(\mathcal{V}_t\) contains components, contracts, artifacts, and evaluators; \(\mathcal{E}_t\) contains typed dependencies and influence claims; \(\mathcal{C}_t\) contains compatibility and conformance requirements; and \(\mathcal{P}_t\) contains provenance and governance metadata.
 
@@ -85,9 +85,9 @@ A dependency may concern an entire subsystem or a smaller factor: a relation typ
 
 A proposed change to UTN may alter AQSI retrieval while a change to AQSI may not alter UTN at all. Therefore:
 
-\[
+$$
 D(a\!\rightarrow\!b)\neq D(b\!\rightarrow\!a)
-\]
+$$
 
 in general. Missing dependency evidence is **unknown**, not a zero-effect claim. Uncertainty must remain attached to both the edge and the estimate.
 
@@ -188,11 +188,11 @@ A newly discovered question may reveal a factor missing from the influence model
 
 For question \(q_i\), let \(H(q_i)=\{h_{i1},\ldots,h_{im}\}\) be its heterogeneous typed factors. A candidate directional influence estimator is:
 
-\[
+$$
 \widehat I_t(q_i\rightarrow q_j)
-=\operatorname{Fold}_{\phi_t}
+=operatorname{Fold}_{\phi_t}
 \left(\{\widehat R_t(h_{ia},h_{jb}),w_{ab,t},u_{ab,t}\}_{a,b}\right),
-\]
+$$
 
 where \(\widehat R_t\) is a typed relation estimate, \(w_{ab,t}\) is a context-dependent weight, \(u_{ab,t}\) represents uncertainty or missingness, and \(\phi_t\) specifies the folding contract.
 
@@ -263,18 +263,18 @@ All model and policy changes should pass predefined conformance and safety check
 
 A proposed change \(\Delta\) may improve one subsystem while harming another. Its evaluation should therefore be a vector rather than an unquestioned scalar:
 
-\[
+$$
 \mathbf{E}(\Delta)=
 (\Delta Q,\Delta T,\Delta C,\Delta R,\Delta G,\Delta K),
-\]
+$$
 
 where the coordinates represent, respectively, question quality, transfer quality, computational or human cost, reliability, governance conformance, and compatibility. Each coordinate requires an explicit metric and direction convention; no universal weighting is assumed.
 
 A policy-approved aggregator may be used for a specific decision:
 
-\[
-U_{\pi}(\Delta)=\operatorname{Aggregate}_{\pi}(\mathbf{E}(\Delta),\mathbf{u}(\Delta)),
-\]
+$$
+U_{\pi}(\Delta)=operatorname{Aggregate}_{\pi}(\mathbf{E}(\Delta),\mathbf{u}(\Delta)),
+$$
 
 where \(\pi\) denotes authorized priorities and constraints, and \(\mathbf{u}\) contains uncertainty estimates. Hard constraints—such as forbidden actions or failed provenance requirements—must not be traded away by a high aggregate score.
 
@@ -282,10 +282,10 @@ where \(\pi\) denotes authorized priorities and constraints, and \(\mathbf{u}\) 
 
 For changes \(\Delta_a\) and \(\Delta_b\), a hypothetical interaction term is:
 
-\[
+$$
 J(\Delta_a,\Delta_b)=
 U(\Delta_a\oplus\Delta_b)-U(\Delta_a)-U(\Delta_b)+U(\varnothing).
-\]
+$$
 
 Positive \(J\) suggests complementarity *under the chosen metric and experiment*; negative \(J\) suggests interference. The quantity is not inherently causal without an appropriate experimental design.
 

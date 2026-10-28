@@ -99,12 +99,11 @@ A relation MAY connect factors of unequal granularity. A proposed analogy MUST N
 
 For a question pair `(q_i, q_j)` under context `c` and perspective `p`, define an **illustrative** estimator:
 
-\[
-\widehat I_{p,c}(q_i\rightarrow q_j)
-=\operatorname{Fold}_{\phi,p,c}\left(\left\{
+$$
+\widehat I_{p,c}(q_i\rightarrow q_j) = operatorname{Fold}_{\phi,p,c}\left(\left\{
  w_{ab,p,c}\,R_{p,c}(h_{ia}\rightarrow h_{jb})
 \right\}_{(a,b)\in E_{ij}}\right).
-\]
+$$
 
 Here `h_ia` and `h_jb` are heterogeneous typed factors, `E_ij` is the set of assessed cross-question factor pairs, `R` is a directed relation assessment, and `φ` identifies the folding procedure. This is a **design template**, not a universal metric or a validated equation. Implementations MAY use other estimators if they satisfy the record and audit contracts.
 
@@ -180,9 +179,9 @@ An aggregate MAY be an interval, distribution, ranked category, or point estimat
 
 A basic AQSI-005 group score is:
 
-\[
+$$
 S_{\mathrm{out}}(q_i\mid Q,p,c)=\sum_{j\in Q\setminus\{i\}}\widehat I_{p,c}(q_i\rightarrow q_j).
-\]
+$$
 
 This baseline expresses estimated outgoing structural influence on other questions in a candidate group. It is **not** automatically a measure of truth, scientific importance, or expected breakthrough. A group score MUST identify the candidate-set snapshot `Q`, perspective, normalization/folding manifest, pair coverage, and treatment of unknowns.
 
@@ -196,9 +195,9 @@ Raw sums depend on candidate-set size and coverage. Comparisons across groups SH
 
 A combined score MAY be defined as an illustrative policy-specific function:
 
-\[
+$$
 V_p(q_i)=F_p\big(S_{\mathrm{out}}(q_i), H(q_i), C(q_i), U(q_i), R(q_i)\big),
-\]
+$$
 
 where `H` is historical assessment, `C` cost, `U` uncertainty, and `R` other declared constraints or risks. `F_p` MUST be identified by version and parameters. The component scores SHOULD remain independently inspectable; a combined number MUST NOT conceal incompatible scales or double-counted historical evidence.
 
@@ -214,11 +213,11 @@ A `PortfolioDecision` MUST specify the candidate-set snapshot, selected and defe
 
 Illustrative constrained selection:
 
-\[
-\max_{P\subseteq Q}\;\operatorname{Value}_{p}(P)
+$$
+\max_{P\subseteq Q}\;operatorname{Value}_{p}(P)
 \quad\text{subject to}\quad
-\operatorname{Cost}(P)\le B,\;P\in\mathcal F_p.
-\]
+operatorname{Cost}(P)\le B,\;P\in\mathcal F_p.
+$$
 
 `B` is a declared budget and `𝔽_p` is the feasible set under policy `p`. `Value_p` MAY account for complementarity, redundancy, diversity, replication, and strategic priorities. No particular objective is mandated. Portfolio selection MUST NOT itself grant execution permission.
 

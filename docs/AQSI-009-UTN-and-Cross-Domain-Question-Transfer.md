@@ -90,9 +90,9 @@ A typed unit should declare, where relevant: identity and version; type and gran
 
 Let a question be represented as a collection of typed, possibly nested units:
 
-\[
+$$
 Q_i = (\mathrm{id}_i, D_i, \mathcal{U}_i, \mathcal{R}_i, E_i, H_i, P_i),
-\]
+$$
 
 where \(D_i\) denotes domain context, \(\mathcal{U}_i\) typed structural units, \(\mathcal{R}_i\) relations among those units, \(E_i\) evidence, \(H_i\) historical links, and \(P_i\) provenance and permissions. This is a *logical interface*, not a requirement to materialize a complete graph.
 
@@ -102,9 +102,9 @@ A structural unit may be a concept, attribute, method, constraint, hypothesis, e
 
 For source unit \(u \in \mathcal U_s\) and target unit \(v \in \mathcal U_t\), a candidate mapping is
 
-\[
+$$
  m=(u,v,r,\phi,\kappa,\epsilon),
-\]
+$$
 
 where \(r\) is a proposed relation (analogy, method applicability, constraint correspondence, contradiction, etc.), \(\phi\) is a transformation or adapter, \(\kappa\) is its stated applicability contract, and \(\epsilon\) records evidence and uncertainty.
 
@@ -135,17 +135,16 @@ Cross-domain transfer is generally asymmetric. A method validated for one data r
 
 Let \(I_{s\rightarrow t}\) denote the *estimated research influence* of a source question or structural unit on a target. In general,
 
-\[
+$$
 I_{s\rightarrow t}\neq I_{t\rightarrow s}.
-\]
+$$
 
 For candidate mappings \(\mathcal M_{s,t}\), one possible score is
 
-\[
-\widehat I_{s\rightarrow t}
-=\operatorname{Fold}_{m\in\mathcal M_{s,t}}
+$$
+\widehat I_{s\rightarrow t}=operatorname{Fold}_{m\in\mathcal M_{s,t}}
 \bigl(w_m\,a_m\,e_m\,g_m\bigr),
-\]
+$$
 
 where \(a_m\) estimates alignment quality, \(e_m\) evidential support, \(g_m\) expected target usefulness under the declared contract, and \(w_m\) is a calibrated, policy-appropriate weight. **Fold** is a configurable aggregation operator, not necessarily a sum. Correlated evidence and duplicate mappings must be accounted for; otherwise the score can be inflated by representational redundancy.
 
@@ -159,10 +158,10 @@ A target question may benefit from a source *counterexample*, *failed method*, o
 
 The historical corpus described in AQSI-004 can provide outcomes for mappings with comparable contracts:
 
-\[
+$$
 \widehat V(q_t\mid m,\mathcal H)
 =F_\theta(X_t,m,\mathcal H),
-\]
+$$
 
 where \(X_t\) is target structure and \(\mathcal H\) contains prior questions, attempted transfers, outcomes, costs, and delayed relay effects. This is a prediction to be calibrated, not an observed value. The model must account for selective exploration: historically untried transfers are not known failures.
 
@@ -196,16 +195,16 @@ Both paths should be supported. Neither is automatically more reliable.
 
 AQSI-004 proposes Question Differential Trees (QDT) for representing related questions using shared structure and differences. A cross-domain pair may be expressed provisionally as
 
-\[
+$$
 Q_s=C_s\oplus\Delta_s,\qquad
 Q_t=C_t\oplus\Delta_t,
-\]
+$$
 
 where \(\oplus\) denotes a representation-specific composition operator. Cross-domain alignment attempts to identify a transferable substructure \(C^*\) and the adaptations needed to apply it in the target:
 
-\[
+$$
 T_{s\rightarrow t}=(C^*,\Delta_{s\rightarrow t},\kappa,E,U).
-\]
+$$
 
 The transfer delta \(\Delta_{s\rightarrow t}\) should explicitly include changed assumptions, new measurements, incompatible dependencies, and missing evidence. It is not simply a textual paraphrase.
 
@@ -309,9 +308,9 @@ This is a failure-to-question relay. It illustrates how negative historical expe
 
 History-aware transfer should record more than a binary success/failure label. A historical transfer outcome can include:
 
-\[
+$$
 h_k=(m_k,\kappa_k,c_k,o_k,e_k,r_k,\tau_k),
-\]
+$$
 
 where \(m_k\) is the mapping, \(\kappa_k\) its contract, \(c_k\) exploration cost, \(o_k\) observed outcome, \(e_k\) evidence, \(r_k\) downstream relay, and \(\tau_k\) evaluation horizon.
 
@@ -337,14 +336,14 @@ AQSI-005 considers goal-open question scoring and portfolio selection. UTN-media
 
 For candidate target question \(q\), one illustrative decomposition is:
 
-\[
-\widehat S(q)=\operatorname{Fold}\bigl(
+$$
+\widehat S(q)=operatorname{Fold}\bigl(
 S_{\mathrm{local}}(q),
 S_{\mathrm{cross}}(q),
 S_{\mathrm{history}}(q),
 U(q),C(q)
 \bigr),
-\]
+$$
 
 where \(S_{\mathrm{cross}}\) is a transfer-informed score, \(U\) captures uncertainty, and \(C\) captures expected exploration cost. This is a design space, not a universal additive scoring law. Any implementation must state whether its fold represents utility, ranking, risk, or a multi-objective comparison.
 
@@ -439,13 +438,13 @@ Cross-domain research may discover a useful relation for which no current type e
 
 A proposed loop is:
 
-\[
+$$
 \text{AQSI question discovery}
 \rightarrow \text{candidate mapping}
 \rightarrow \text{exploration evidence}
 \rightarrow \text{UTN revision proposal}
 \rightarrow \text{improved structural retrieval}.
-\]
+$$
 
 This is **cross-structural co-evolution**, a hypothesis explored further in `EXT-002-Cross-Structural-Co-Evolution.md` (planned). It could involve UTN, differential trees, multi-granularity influence scoring, historical learning, structural relay, and governance. Benefits are not automatic: unchecked type proliferation could reduce interoperability and destabilize historical scores.
 
