@@ -1,0 +1,6 @@
+Autonomous Questioning Structural Intelligence (AQSI) — v1.0.0 Initial Research Framework
+
+Autonomous Questioning Structural Intelligence (AQSI) proposes a theory-first framework for moving AI research systems beyond answering supplied questions toward discovering, evaluating, selecting, and exploring research questions autonomously. It combines biomimetic question discovery, multi-granularity directional influence scoring, historical question intelligence and question differential trees, goal-open research portfolio selection, canonical Question Units and exploration contracts, and evidence-aware structural relay. UTN-based semantic alignment is proposed to support cross-domain question transfer, while a Strategic Question Control Plane preserves human authority over research priorities, resources, and execution permissions. The repository includes ten core research papers, four specifications, three illustrative cases, three extensions, and a validation roadmap. AQSI v1.0.0 is a conceptual research proposal: its algorithms, benefits, and recursive-improvement hypotheses remain to be empirically validated. The project welcomes reproducible experiments, counter-evidence, and collective structural learning.
+
+GitHub repository: https://github.com/sizhet/Autonomous-Questioning-Structural-Intelligence
+License: Apache-2.0
