@@ -1,0 +1,36 @@
+{
+  "title": "Autonomous Questioning Structural Intelligence (AQSI): Question Discovery, Multi-Granularity Influence Scoring, Structural Relay, and Research Governance",
+  "description": "AQSI is a theory-first research framework for autonomous discovery, representation, evaluation, and exploration of research questions. It proposes multi-granularity directional influence scoring, historical question intelligence and differential trees, canonical Question Units and exploration contracts, strategic question control planes, UTN-supported cross-domain question transfer, and evidence-aware structural relay for collective learning. This v1.0.0 release presents research hypotheses, conceptual specifications, illustrative cases, and a validation roadmap; it does not claim an implemented runtime, demonstrated performance gains, verified recursive self-improvement, or artificial superintelligence.",
+  "creators": [
+    {
+      "name": "Tan, Sizhe"
+    }
+  ],
+  "keywords": [
+    "autonomous questioning",
+    "structural intelligence",
+    "question discovery",
+    "multi-granularity influence scoring",
+    "historical question intelligence",
+    "question differential trees",
+    "structural relay",
+    "collective learning",
+    "research governance",
+    "universal typing and naming",
+    "cross-domain transfer",
+    "recursive self-improvement"
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "access_right": "open",
+  "language": "eng",
+  "version": "v1.0.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sizhet/Autonomous-Questioning-Structural-Intelligence",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
