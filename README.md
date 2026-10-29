@@ -181,6 +181,8 @@ Please use [CITATION.cff](CITATION.cff) for the preferred citation metadata once
 
 Unless a specific file states otherwise, this repository is intended to be released under the **Apache License 2.0**. See [LICENSE.txt](LICENSE.txt).
 
+DOI: 10.5281/zenodo.23777274
+
 ---
 
 ## 📚 DBM-SI Series Navigation
