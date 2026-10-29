@@ -15,6 +15,10 @@ Scientific and engineering questions frequently share useful structures without 
 
 ---
 
+![Fig-008-UTN-Cross-Domain-Relay-and-RSI.png](../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png)
+
+---
+
 ## 1. From Domain-Specific Questions to Portable Research Structures
 
 A research question is more than its natural-language sentence. It may contain a target phenomenon, a measurable attribute, an intervention method, assumptions, evidence requirements, constraints, and unresolved residuals. Two questions from distant domains may have a useful relationship at the level of one such component while differing at nearly every other level.
@@ -188,6 +192,12 @@ The pipeline is not necessarily linear. A failed mapping can trigger a new quest
 **LLM-first:** generate a candidate analogy, then require UTN mapping, contract checks, and evidence review before it is selected for expensive exploration.
 
 Both paths should be supported. Neither is automatically more reliable.
+
+---
+
+![Fig-008-UTN-Cross-Domain-Relay-and-RSI.png](../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png)
+
+*Figure 8. UTN-mediated cross-domain question transfer and a separate, gated structural-improvement loop support research into controlled recursive evolution.*
 
 ---
 
@@ -657,4 +667,3 @@ This vocabulary is provisional and intentionally extensible.
 - **No fabricated validation:** worked scenarios and algorithms are illustrative; no benchmark results are asserted.
 - **No invented DOI or external citations:** publication identifiers and formal references should be added only after verification.
 - **Collective Learning Friendly:** implementations should publish schemas, evaluation protocols, negative results, and reusable transfer records when permissions permit.
-- **Suggested figure:** `figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png`, illustrating source structures, typed alignment, contract checks, target question synthesis, exploration, and feedback into UTN and AQSI.

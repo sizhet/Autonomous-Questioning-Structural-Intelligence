@@ -56,6 +56,14 @@ The following taxonomy is intentionally functional rather than neuroscientific.
 
 These triggers are neither exhaustive nor mutually exclusive. One candidate may originate from several sources; provenance should record each rather than force a single label.
 
+---
+
+![Fig-002-Sources-of-Autonomous-Questions.png](../figures/Fig-002-Sources-of-Autonomous-Questions.png)
+
+*Figure 2. Complementary sources of autonomous question candidates, with explicit provenance and two generation routes: language-first and structure-first.*
+
+---
+
 ### 2.1 A functional analogy
 
 An observer notices that a process behaves differently from expectation. The difference can become a residual; the residual can be related to prior failures; a structurally analogous method in another domain can suggest an intervention; the proposed intervention can become a question. The architecture models this sequence explicitly while leaving open whether a biological system uses comparable representations.

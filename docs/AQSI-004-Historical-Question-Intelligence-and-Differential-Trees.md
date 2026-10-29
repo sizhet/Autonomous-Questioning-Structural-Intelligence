@@ -127,7 +127,7 @@ A **Question Differential Tree** represents a family of related questions throug
 
 Let a question have a structural representation:
 
-$$
+\[
 X(q) = (C,A,M,H,E,R,P)
 $$
 
@@ -135,7 +135,7 @@ where \(C\) denotes concepts, \(A\) attributes, \(M\) methods, \(H\) assumptions
 
 For a question family with core \(X_0\), a variant is represented as:
 
-$$
+\[
 X(q_i) = operatorname{Apply}(X_0,\Delta_i)
 $$
 
@@ -169,6 +169,12 @@ Typed edits allow historical learning at the **transformation level**: a system 
 
 ---
 
+![Fig-004-Historical-Question-Intelligence.png](../figures/Fig-004-Historical-Question-Intelligence.png)
+
+*Figure 4. Historical Question Intelligence reuses scored question families and exploration outcomes to inform screening, revisitation, and learning.*
+
+---
+
 ## 5. Multi-Granularity Retrieval and Structural Alignment
 
 Historical comparison should not stop at whole-question similarity. A new question may share little surface vocabulary with a past question yet reuse its method, failure mode, constraint, or transfer point.
@@ -188,7 +194,7 @@ UTN supplies addressability and candidate type mappings; it does not guarantee s
 
 A method previously useful for question \(q_i\) may help question \(q_j\), even if the reverse transfer is not plausible. Thus, in general:
 
-$$
+\[
 I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i)
 $$
 
@@ -200,7 +206,7 @@ A directional score can combine relation type, granularity, historical evidence,
 
 Let historical experience at time \(t\) be:
 
-$$
+\[
 \mathcal{H}_t = \{(X_i,\hat{s}_i,y_i,c_i,\pi_i,\tau_i)\}_{i=1}^{N_t}
 $$
 
@@ -208,7 +214,7 @@ where \(X_i\) is a structured question, \(\hat{s}_i\) its pre-exploration estima
 
 A learned evaluator estimates:
 
-$$
+\[
 \hat{V}_t(q\mid p,b)=F_{\theta_t}(X(q),\mathcal{H}_t,p,b)
 $$
 
@@ -256,7 +262,7 @@ The aim is to reduce wasted exploration, **not** to guarantee that the system ne
 
 For an ongoing exploration, define an estimated marginal value of another step:
 
-$$
+\[
 \Delta \hat V_t(q,k)=\mathbb{E}[V_{k+1}-V_k\mid\mathcal{H}_t]
 $$
 
@@ -283,7 +289,7 @@ Some questions produce little immediate value but lead to important downstream r
 
 A provisional model is:
 
-$$
+\[
 V_{\mathrm{total}}(q)=V_{\mathrm{direct}}(q)+\lambda V_{\mathrm{downstream}}(q)
 $$
 
@@ -307,13 +313,13 @@ AQSI may operate without a single externally specified target question. This doe
 
 A baseline group score is:
 
-$$
+\[
 S_{\mathrm{group}}(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j)
 $$
 
 This can be compared with a history-conditioned score \(\hat V_t(q_i)\). One experimental fusion is:
 
-$$
+\[
 S(q_i)=operatorname{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
 $$
 

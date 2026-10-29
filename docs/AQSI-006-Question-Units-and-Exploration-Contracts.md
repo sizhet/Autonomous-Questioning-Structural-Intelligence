@@ -116,6 +116,14 @@ An early implementation should require only:
 
 Other fields may be unknown or deferred. Unknown values should be explicit rather than fabricated to satisfy schema completeness.
 
+---
+
+![Fig-006-Question-Unit-and-Structural-Relay.png](../figures/Fig-006-Question-Unit-and-Structural-Relay.png)
+
+*Figure 6. A portable Question Unit participates in authorized exploration and provenance-preserving Structural Relay, producing both findings and successor questions.*
+
+---
+
 ## 4. Multi-granularity structural representation
 
 A QU may refer to entities and factors at different scales: domain, problem family, concept, attribute, method, mechanism, parameter, observation, evidence, counter-example, residual, and potential transfer point. No single level should be privileged in advance.
@@ -313,6 +321,8 @@ An outcome can:
 - modify the candidate portfolio without changing strategic authority.
 
 Relay proposals should be independently reviewable. An executor must not silently publish or activate new policies because its answer recommends doing so.
+
+![Fig-006-Question-Unit-and-Structural-Relay.png](../figures/Fig-006-Question-Unit-and-Structural-Relay.png)
 
 ## 11. Interface with Historical Question Intelligence
 
@@ -570,8 +580,6 @@ review_status: pending
 **Downstream:** `AQSI-007-Question-Structural-Relay-and-Collective-Learning.md`; `AQSI-008-Strategic-Question-Control-Planes.md`; `AQSI-009-UTN-and-Cross-Domain-Question-Transfer.md`; `AQSI-010-MVP-Architecture-and-Recursive-Evolution.md`.
 
 **Future specifications:** `SPEC-001-Canonical-Question-Unit-Contract.md`; `SPEC-003-Question-Relay-and-Exploration-Lifecycle.md`; `SPEC-004-Control-Plane-and-Policy-Conformance.md`.
-
-**Figure guidance:** `Fig-006-Question-Unit-and-Structural-Relay.png` can be referenced after Section 10, with a caption emphasizing QU identity, exploration contract, evidence, explicit leftover, and descendant-question lineage. No figure is required to understand this paper.
 
 ---
 

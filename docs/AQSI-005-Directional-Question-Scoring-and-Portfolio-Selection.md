@@ -14,6 +14,12 @@ Autonomous questioning requires more than generating plausible questions. It mus
 
 ---
 
+![Fig-005-Directional-Scoring-and-Portfolio-Selection.png](../figures/Fig-005-Directional-Scoring-and-Portfolio-Selection.png)
+
+*Figure 5. Directional influence and historical evidence inform question ranking, while portfolio policies govern the allocation of limited research resources.*
+
+---
+
 ## 1. Motivation: From Question Ranking to Question Portfolios
 
 An autonomous question generator can easily produce more candidates than a research system can examine. Selection must therefore address at least four distinct issues:

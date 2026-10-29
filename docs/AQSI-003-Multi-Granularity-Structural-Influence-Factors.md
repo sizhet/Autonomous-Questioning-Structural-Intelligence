@@ -59,6 +59,14 @@ Here $\nu(u)$ is the unit's type and $g(u)$ its granularity. Example types inclu
 
 Granularity is not a single linear hierarchy. A question may simultaneously have a decomposition tree, a method graph, a concept graph, and a provenance graph. Different views can overlap, and no single all-in-one schema is required.
 
+---
+
+![Fig-003-Multi-Granularity-Influence-Graph.png](../figures/Fig-003-Multi-Granularity-Influence-Graph.png)
+
+*Figure 3. Typed, directed, multi-granularity structural relationships from which question-level influence estimates may be composed.*
+
+---
+
 ### 2.1 Typed identity versus semantic equivalence
 
 A stable identifier allows a unit to be referenced; it does not prove that two units are equivalent. An alignment record should explicitly specify whether the relationship is exact equivalence, approximate analogy, partial overlap, specialization, or an unverified candidate mapping. Domain and context qualifiers are essential.

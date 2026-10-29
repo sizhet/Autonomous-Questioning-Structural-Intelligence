@@ -141,6 +141,14 @@ $$
 
 Likewise, a question outside the current funded portfolio is not necessarily unimportant; it may remain archived, unfunded, or eligible for later reconsideration.
 
+---
+
+![Fig-007-Strategic-Question-Control-Plane.png](../figures/Fig-007-Strategic-Question-Control-Plane.png)
+
+*Figure 7. Four-layer research governance separates human strategic authority from AI question selection and explicitly authorized execution.*
+
+---
+
 ## 5. Canonical Strategic Policy Envelope
 
 A policy envelope should be **versioned, typed, traceable, and inspectable**. The following example is illustrative, not a normative schema.

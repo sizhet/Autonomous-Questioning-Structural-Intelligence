@@ -14,6 +14,12 @@ Autonomous Questioning Structural Intelligence (AQSI) proposes a research archit
 
 ---
 
+![figures/Fig-001-AQSI-Grand-Architecture.png](../figures/Fig-001-AQSI-Grand-Architecture.png)
+
+**Suggested caption:** *Figure 1. Conceptual AQSI architecture: autonomous question discovery and evaluation feed governed exploration; evidence-bearing structural relay closes the learning loop.*
+
+---
+
 ## 1. Purpose, Scope, and Research Position
 
 AQSI asks whether a persistent, structurally organized questioning process can improve the efficiency, diversity, and eventual usefulness of AI-assisted inquiry. A conversational model can propose questions, but a sustained research program additionally requires durable identities, historical comparison, calibrated selection, reproducible exploration, explicit evidence, and mechanisms for carrying unresolved problems forward.
@@ -319,6 +325,14 @@ Policy versions and decision rationales must be attached to portfolio decisions 
 
 Progression between stages is contingent on evidence, not calendar time.
 
+---
+
+![Fig-008-UTN-Cross-Domain-Relay-and-RSI.png](../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png)
+
+*Figure 8. UTN-mediated cross-domain question transfer and a separate, gated structural-improvement loop support research into controlled recursive evolution.*
+
+---
+
 ## 12. Reference MVP Algorithm
 
 The following pseudocode describes the research loop, not a production implementation:
@@ -387,6 +401,8 @@ The notation is illustrative: practical acceptance may require confidence interv
 - Detect self-reinforcing cycles in which the system generates questions optimized for its own scorer.
 - Retain negative results and failed change proposals in the history.
 - Require rollback and independent authorization for changes affecting policy or execution permissions.
+
+![../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png](../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png)
 
 ## 14. Evaluation Framework and Baselines
 
@@ -564,7 +580,5 @@ The event structure should allow reconstruction of a historical score using only
 This document is a theory-first research proposal. Illustrative formulas, object schemas, workflows, and examples are candidate designs. They do not constitute evidence of empirical superiority, deployment readiness, or autonomous scientific achievement. Any later implementation should publish versioned specifications, conformance results, reproducible evaluations, and relevant negative findings. External scientific literature and DOI references should be added only after verification; no external experimental findings are asserted here.
 
 ---
-
-**Suggested figure placement:** `../figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png` after Section 13 or Section 19, with a caption distinguishing proposed architecture from implemented capability. See [`FIGURE-INDEX.md`](../FIGURE-INDEX.md).
 
 **Companion documents:** [`README.md`](../README.md), [`CONTENTS.md`](../CONTENTS.md), [`TESTABLE-HYPOTHESES.md`](../TESTABLE-HYPOTHESES.md), and [`VALIDATION-ROADMAP.md`](../VALIDATION-ROADMAP.md).

@@ -13,6 +13,12 @@ Most deployed AI workflows begin with an externally supplied question, instructi
 
 ---
 
+![figures/Fig-001-AQSI-Grand-Architecture.png](../figures/Fig-001-AQSI-Grand-Architecture.png)
+
+*Figure 1. Conceptual AQSI architecture: autonomous question discovery and evaluation feed governed exploration; evidence-bearing structural relay closes the learning loop.*
+
+---
+
 ## 1. Introduction: The Missing Half of the Research Loop
 
 A conventional AI interaction is organized around a question or task supplied by a human or an external system:
@@ -62,6 +68,8 @@ Candidate questions may arise from several partially overlapping mechanisms:
 | Meta-evaluation | The question-generation process underperforms | Question the discovery or scoring method |
 
 Human questioning provides useful inspiration, but AQSI uses these as engineering hypotheses rather than claims about the exact computational implementation of human thought.
+
+![Fig-002-Sources-of-Autonomous-Questions.png](../figures/Fig-002-Sources-of-Autonomous-Questions.png)
 
 ## 3. Questions as Structural Intelligence Units
 
