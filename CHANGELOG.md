@@ -62,7 +62,7 @@ Case studies are **conceptual or hypothetical worked examples** unless explicitl
 - `START-HERE.md` — reading routes for different audiences.
 - `CONTENTS.md` — structured repository navigation.
 - `GLOSSARY.md` — terminology and critical non-equivalences.
-- `FIGURE-INDEX.md` — planned figure descriptions and insertion guidance.
+- `FIGURE-INDEX.md` — figure descriptions and insertion guidance.
 - `FUTURE-DIRECTIONS.md` — candidate research extensions.
 - `OPEN-QUESTIONS.md` — unresolved research questions.
 - `TESTABLE-HYPOTHESES.md` — falsifiable claims and suggested comparisons.

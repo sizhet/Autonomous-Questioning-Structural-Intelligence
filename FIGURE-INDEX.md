@@ -3,7 +3,7 @@
 **Repository:** Autonomous-Questioning-Structural-Intelligence  
 **Release track:** v1.0.0 — Initial Research Framework  
 **Document status:** Research navigation and figure-insertion specification  
-**Scope:** Eight planned figures, their intended scientific meanings, and manuscript placement
+**Scope:** Eight figures, their intended scientific meanings, and manuscript placement
 
 > **Asset-status note (important).** The eight figure names below define the repository's intended **individual** PNG assets. At the time this index was prepared, the working files contained one **eight-panel composite infographic** (`a_wide_infographic_poster_with_eight_labeled_panel.png`), not eight verified standalone files at the paths listed below. The links therefore specify *target repository paths*, not a claim that those eight files already exist. Export and visually review each standalone panel before publishing, or explicitly publish the composite as a separate overview image. Do not rename the composite to one of the individual figure filenames.
 
@@ -146,7 +146,7 @@ Keep figure numbers stable across documents. A repeated figure should retain its
 - [START-HERE.md](START-HERE.md) — reading paths.
 - [CONTENTS.md](CONTENTS.md) — complete repository navigation.
 - [GLOSSARY.md](GLOSSARY.md) — terminology and non-equivalences.
-- [VALIDATION-ROADMAP.md](VALIDATION-ROADMAP.md) — planned empirical validation (when added).
+- [VALIDATION-ROADMAP.md](VALIDATION-ROADMAP.md) — empirical validation.
 
 ---
 

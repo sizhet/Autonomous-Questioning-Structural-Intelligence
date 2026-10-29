@@ -129,8 +129,6 @@ The cases are **illustrative research designs**. Their hypothetical scores and o
 | [Fig-007](figures/Fig-007-Strategic-Question-Control-Plane.png) | Strategic Question Control Plane |
 | [Fig-008](figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png) | UTN, cross-domain relay, and RSI |
 
-> Figure links describe the planned repository layout. Each image should be committed at its exact path before publication.
-
 ## Research and Validation Roadmap
 
 The proposed evaluation sequence is deliberately incremental:

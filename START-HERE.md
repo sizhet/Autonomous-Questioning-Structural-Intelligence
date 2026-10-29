@@ -79,7 +79,7 @@ The **Strategic Question Control Plane** governs priorities, resources, and perm
 
 ## 6. Visual Guide
 
-The planned figure set offers eight complementary views:
+The figure set offers eight complementary views:
 
 - [Fig-001 — AQSI Grand Architecture](figures/Fig-001-AQSI-Grand-Architecture.png)
 - [Fig-002 — Sources of Autonomous Questions](figures/Fig-002-Sources-of-Autonomous-Questions.png)

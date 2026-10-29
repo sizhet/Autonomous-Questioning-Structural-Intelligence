@@ -78,7 +78,7 @@ These are proposed contracts for future conformance testing, not an assertion th
 | Fig-007 | [Strategic Question Control Plane](figures/Fig-007-Strategic-Question-Control-Plane.png) | AQSI-008 |
 | Fig-008 | [UTN Cross-Domain Relay and RSI](figures/Fig-008-UTN-Cross-Domain-Relay-and-RSI.png) | AQSI-009, AQSI-010 |
 
-See [FIGURE-INDEX.md](FIGURE-INDEX.md) for captions, usage and placement guidance. **Note:** these links specify the planned individual figure filenames; verify that each standalone PNG exists before publishing. A composite eight-panel overview is not equivalent to eight separate image files.
+See [FIGURE-INDEX.md](FIGURE-INDEX.md) for captions, usage and placement guidance.
 
 ## VI. Repository-Level Guides and Research Governance
 
