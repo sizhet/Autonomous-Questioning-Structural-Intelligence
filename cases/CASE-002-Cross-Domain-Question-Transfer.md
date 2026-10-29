@@ -118,7 +118,7 @@ $$
 Q = \langle C,\Delta_D,\Gamma_D\rangle,
 $$
 
-where \(C\) is a reusable structural core, \(\Delta_D\) is the domain-specific delta, and \(\Gamma_D\) records constraints and exclusions.
+where $C$ is a reusable structural core, $\Delta_D$ is the domain-specific delta, and $\Gamma_D$ records constraints and exclusions.
 
 **Core:** When intermittent observations vary with context, which controlled perturbations and measurements can distinguish competing hidden causes?
 
@@ -153,14 +153,14 @@ A conformant comparison holds retrieval access, exploration budget, and target-d
 
 ### 7.1 Factor-level influence
 
-Let \(H(q)\) denote typed factors of a question. A directional relation score may be defined as:
+Let $H(q)$ denote typed factors of a question. A directional relation score may be defined as:
 
 $$
 I(q_i\rightarrow q_j)=operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \left[w_{ab}\,R_{ab}(a\rightarrow b)\right].
 $$
 
-Here \(R_{ab}\) represents a proposed directional influence relationship; \(w_{ab}\) and the folding operator are versioned, replaceable components. An evidence state and uncertainty interval should accompany the numerical estimate. Generally, \(I(q_i\rightarrow q_j)\ne I(q_j\rightarrow q_i)\).
+Here $R_{ab}$ represents a proposed directional influence relationship; $w_{ab}$ and the folding operator are versioned, replaceable components. An evidence state and uncertainty interval should accompany the numerical estimate. Generally, $I(q_i\rightarrow q_j)\ne I(q_j\rightarrow q_i)$.
 
 ### 7.2 Separate transfer plausibility from research value
 
