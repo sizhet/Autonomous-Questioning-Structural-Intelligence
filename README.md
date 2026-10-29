@@ -28,6 +28,14 @@ An autonomous questioning system may become more useful when it can:
 
 **Goal-open question selection** means that the system need not begin with one predetermined target question. It does **not** mean that evaluation is value-free, unconstrained, or independent of human governance.
 
+---
+
+![figures/Fig-001-AQSI-Grand-Architecture.png](figures/Fig-001-AQSI-Grand-Architecture.png)
+
+*Figure 1. Conceptual AQSI architecture: autonomous question discovery and evaluation feed governed exploration; evidence-bearing structural relay closes the learning loop.*
+
+---
+
 ## Conceptual Architecture
 
 The proposed system combines five research functions:

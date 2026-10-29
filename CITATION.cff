@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: >-
   If you use this research framework, please cite the repository
   and the specific version consulted.
-type: software
+type: generic
 title: 'Autonomous Questioning Structural Intelligence (AQSI): Question Discovery, Multi-Granularity Influence Scoring, Structural Relay, and Research Governance'
 authors:
   - family-names: Tan
