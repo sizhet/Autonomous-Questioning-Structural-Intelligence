@@ -82,8 +82,6 @@ The v1.0.0 research plan defines eight figure identifiers:
 7. `Fig-007-Strategic-Question-Control-Plane.png`
 8. `Fig-008-UTN-Cross-Domain-Relay-and-RSI.png`
 
-**Publication check:** The existence and final placement of eight *separate* PNG files must be confirmed before release. An eight-panel composite is not equivalent to eight independently named image assets.
-
 ### Research principles established
 
 - **Specifications and contracts before runtime claims.**
