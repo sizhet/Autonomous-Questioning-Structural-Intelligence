@@ -82,7 +82,7 @@ Universal Typing and Naming (UTN) is proposed as an alignment mechanism for hete
 ### Repository navigation and validation
 
 - [README](../README.md), [START-HERE](../START-HERE.md), [CONTENTS](../CONTENTS.md), and [GLOSSARY](../GLOSSARY.md)
-- [FIGURE-INDEX](../FIGURE-INDEX.md) — planned figure descriptions and placements
+- [FIGURE-INDEX](../FIGURE-INDEX.md) — figure descriptions and placements
 - [FUTURE-DIRECTIONS](../FUTURE-DIRECTIONS.md) and [OPEN-QUESTIONS](../OPEN-QUESTIONS.md)
 - [TESTABLE-HYPOTHESES](../TESTABLE-HYPOTHESES.md) and [VALIDATION-ROADMAP](../VALIDATION-ROADMAP.md)
 - [CHANGELOG](../CHANGELOG.md), [CITATION.cff](../CITATION.cff), and [`.zenodo.json`](../.zenodo.json)
@@ -122,7 +122,7 @@ Negative results, failed transfers, and unresolved questions are welcome researc
 
 Please use the repository's [`CITATION.cff`](../CITATION.cff) for citation metadata. A persistent DOI may be added after a successful Zenodo release and should not be inferred from the version tag alone.
 
-Licensed under **Apache License 2.0**; see [`LICENSE`](../LICENSE).
+Licensed under **Apache License 2.0**; see [`LICENSE.txt`](../LICENSE.txt).
 
 ---
 
