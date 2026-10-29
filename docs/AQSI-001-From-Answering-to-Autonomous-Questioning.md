@@ -98,7 +98,7 @@ $$
 I(q_i,q_j)=operatorname{Fold}_{a,b}\!\left[w_{ab}\,R(h_{ia},h_{jb})\right],
 $$
 
-where \(h_{ia}\) and \(h_{jb}\) are addressable structural units associated with two questions, \(R\) evaluates a typed relation, \(w_{ab}\) represents contextual and evidential weighting, and **Fold** denotes a specified composition operator. The operator may be additive, constrained, nonlinear, or otherwise task-appropriate. The score can be directional: \(I(q_i,q_j)\neq I(q_j,q_i)\).
+where $h_{ia}$ and $h_{jb}$ are addressable structural units associated with two questions, $R$ evaluates a typed relation, $w_{ab}$ represents contextual and evidential weighting, and **Fold** denotes a specified composition operator. The operator may be additive, constrained, nonlinear, or otherwise task-appropriate. The score can be directional: $I(q_i,q_j)\neq I(q_j,q_i)$.
 
 This formula is a design template, not a calibrated scoring law. Implementations must define relation semantics, normalization, missing-value handling, and evidence provenance.
 
@@ -114,7 +114,7 @@ $$
 \mathcal{H}_t=\{(q_i,X_i,S_i,O_i,R_i)\}_{i=1}^{N},
 $$
 
-\(X_i\) denotes structural features, \(S_i\) past assessments, \(O_i\) observed outcomes, and \(R_i\) relay records. A new question can be evaluated using both its current structural relationships and relevant historical experience.
+$X_i$ denotes structural features, $S_i$ past assessments, $O_i$ observed outcomes, and $R_i$ relay records. A new question can be evaluated using both its current structural relationships and relevant historical experience.
 
 Historical scores are not assumed to be ground truth. A prior evaluator may have been biased, mistaken, or unable to recognize long-term value. Records should distinguish **predicted value**, **observed result**, and **subsequent attributed value**. Failed attempts may still produce useful evidence or reveal a reusable limitation.
 
@@ -130,7 +130,7 @@ Historical evaluations can support early filtering of repetitive or low-yield ca
 
 AQSI distinguishes the absence of a **specific externally selected target question** from the absence of **evaluation criteria**. The former is compatible with autonomous question selection; the latter would make prioritization underdetermined.
 
-For candidate questions \(Q=\{q_1,\ldots,q_n\}\), one baseline is a directional pairwise matrix:
+For candidate questions $Q=\{q_1,\ldots,q_n\}$, one baseline is a directional pairwise matrix:
 
 $$
 M_{ij}=I(q_i,q_j),\qquad S_{\mathrm{group}}(q_i)=\sum_{j\ne i}M_{ij}.
