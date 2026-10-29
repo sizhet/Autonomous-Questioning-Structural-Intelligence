@@ -5,7 +5,7 @@
 **Status:** Research proposal; conceptual governance architecture and testable contracts, not a validated implementation  
 **License:** Apache-2.0 (repository-level)  
 **Companion papers:** AQSI-001 through AQSI-007; AQSI-009 and AQSI-010  
-**Related specification:** `SPEC-004-Control-Plane-and-Policy-Conformance.md` (planned)
+**Related specification:** `SPEC-004-Control-Plane-and-Policy-Conformance.md` 
 
 ## Abstract
 

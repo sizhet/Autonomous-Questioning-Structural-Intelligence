@@ -5,7 +5,7 @@
 **Status:** Theory-first research proposal; mechanisms and hypotheses are not empirically validated  
 **License:** Apache-2.0 (repository-level)  
 **Companion papers:** AQSI-001 through AQSI-008; AQSI-010  
-**Related specifications:** `SPEC-001-Canonical-Question-Unit-Contract.md`, `SPEC-002-Structural-Influence-and-Scoring-Contract.md`, and `SPEC-003-Question-Relay-and-Exploration-Lifecycle.md` (planned)
+**Related specifications:** `SPEC-001-Canonical-Question-Unit-Contract.md`, `SPEC-002-Structural-Influence-and-Scoring-Contract.md`, and `SPEC-003-Question-Relay-and-Exploration-Lifecycle.md` 
 
 ## Abstract
 
@@ -446,7 +446,7 @@ $$
 \rightarrow \text{improved structural retrieval}.
 $$
 
-This is **cross-structural co-evolution**, a hypothesis explored further in `EXT-002-Cross-Structural-Co-Evolution.md` (planned). It could involve UTN, differential trees, multi-granularity influence scoring, historical learning, structural relay, and governance. Benefits are not automatic: unchecked type proliferation could reduce interoperability and destabilize historical scores.
+This is **cross-structural co-evolution**, a hypothesis explored further in `EXT-002-Cross-Structural-Co-Evolution.md`. It could involve UTN, differential trees, multi-granularity influence scoring, historical learning, structural relay, and governance. Benefits are not automatic: unchecked type proliferation could reduce interoperability and destabilize historical scores.
 
 ### 12.1 Type-evolution governance
 
@@ -586,7 +586,7 @@ Each hypothesis should be tested with prespecified datasets, baselines, success 
 9. Which evaluation designs best separate genuinely useful analogies from persuasive but invalid narratives?
 10. What governance prevents a cross-domain transfer service from becoming an unauthorized data bridge?
 
-These questions connect to the repository-level `OPEN-QUESTIONS.md` and `VALIDATION-ROADMAP.md` (planned).
+These questions connect to the repository-level `OPEN-QUESTIONS.md` and `VALIDATION-ROADMAP.md`.
 
 ---
 
