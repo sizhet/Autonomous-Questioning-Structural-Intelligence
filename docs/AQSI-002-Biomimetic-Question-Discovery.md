@@ -116,13 +116,13 @@ Association-driven discovery is central to the proposed cross-domain research ag
 
 Candidate units include concepts, attributes, elements, features, methods, constraints, transfer points, evidence, counter-evidence, and historical feedback. A method in one domain may address a residual in another even when the two domain labels are semantically distant.
 
-Let a domain structure contain typed units \(U=\{u_1,\ldots,u_m\}\) and typed, evidence-bearing relationships \(E\). A candidate cross-domain relation is:
+Let a domain structure contain typed units $U=\{u_1,\ldots,u_m\}$ and typed, evidence-bearing relationships $E$. A candidate cross-domain relation is:
 
 $$
  r=(u_a,operatorname{relation\_type},u_b,operatorname{direction},e,c),
 $$
 
-where \(e\) identifies supporting or contradicting evidence and \(c\) expresses confidence or an explicitly unknown state. The relation may be asymmetric.
+where $e$ identifies supporting or contradicting evidence and $c$ expresses confidence or an explicitly unknown state. The relation may be asymmetric.
 
 **Example:** A historical debugging method that isolates failing prerequisites may be structurally relevant to an experimental research program with unresolved dependencies. The discovery question is: “Can dependency-localization techniques reduce the search space of this experimental bottleneck?” The transfer must be tested rather than inferred from shared vocabulary.
 

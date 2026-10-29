@@ -34,7 +34,7 @@ This paper proposes a research interface, not a new proven law of association. T
 
 ## 2. Structural Units and Granularity
 
-Let a question \(q\) be represented by a finite, versioned collection of structural units:
+Let a question $q$ be represented by a finite, versioned collection of structural units:
 
 $$
 H(q)=\{u_1,u_2,\ldots,u_m\},\qquad
@@ -107,7 +107,7 @@ $$
 G_t=(V_t,E_t,\tau_V,\tau_E,P_t),
 $$
 
-where \(V_t\) are structural units, \(E_t\subseteq V_t\times V_t\) are directed candidate relations, \(\tau_V\) and \(\tau_E\) specify node and edge types, and \(P_t\) records provenance, time, confidence, and evidence.
+where $V_t$ are structural units, $E_t\subseteq V_t\times V_t$ are directed candidate relations, $\tau_V$ and $\tau_E$ specify node and edge types, and $P_t$ records provenance, time, confidence, and evidence.
 
 Possible relation families include:
 
@@ -124,13 +124,13 @@ An edge is a hypothesis about a relationship until evidence supports it. Mere co
 
 ## 5. Directional Multi-Granularity Influence Scoring
 
-For units \(u\) and \(v\), let
+For units $u$ and $v$, let
 
 $$
 r_t(u,v\mid c,\rho)\in\mathbb{R}
 $$
 
-be a context- and relation-specific score, where \(c\) describes the current research setting and \(\rho\) is the proposed relationship type. Its scale, sign, and interpretation must be declared by the scorer contract. A score is accompanied by uncertainty and evidence provenance, not only a scalar.
+be a context- and relation-specific score, where $c$ describes the current research setting and $\rho$ is the proposed relationship type. Its scale, sign, and interpretation must be declared by the scorer contract. A score is accompanied by uncertainty and evidence provenance, not only a scalar.
 
 **Directionality is fundamental:**
 
@@ -140,7 +140,7 @@ $$
 
 in general. For example, a method from domain A may address a residual in domain B, while the residual does not provide an equally useful method for domain A.
 
-For questions \(q_i\) and \(q_j\), define candidate unit-pair relations
+For questions $q_i$ and $q_j$, define candidate unit-pair relations
 
 $$
 \mathcal{P}_{ij}=\{(u,v,\rho):u\in H(q_i),v\in H(q_j),\rho\in\mathcal{R}\}.
@@ -154,11 +154,11 @@ operatorname{Fold}_{\Phi_c}
 \left(\{(r_t(u,v\mid c,\rho),w_{uv\rho},e_{uv\rho})\}_{\mathcal{P}_{ij}}\right),
 $$
 
-where \(w\) is a context-dependent weight, \(e\) captures evidence and uncertainty, and \(\Phi_c\) is an explicitly selected folding policy. The expression is a family of algorithms rather than a fully specified numerical estimator.
+where $w$ is a context-dependent weight, $e$ captures evidence and uncertainty, and $\Phi_c$ is an explicitly selected folding policy. The expression is a family of algorithms rather than a fully specified numerical estimator.
 
 ### 5.1 Folding options
 
-An implementation may use weighted aggregation, top-\(k\) evidence selection, prerequisite-sensitive AND folding, conflict-aware aggregation, or a learned ranker. It must state how it handles missing edges, repeated evidence, correlation, negative evidence, and normalization. Multiple correlated attribute matches should not be counted as independent discoveries.
+An implementation may use weighted aggregation, top-$k$ evidence selection, prerequisite-sensitive AND folding, conflict-aware aggregation, or a learned ranker. It must state how it handles missing edges, repeated evidence, correlation, negative evidence, and normalization. Multiple correlated attribute matches should not be counted as independent discoveries.
 
 ### 5.2 Influence is not value
 
@@ -172,7 +172,7 @@ $$
 \mathcal{H}_t=\{(q_k,X_k,s_k,o_k,\ell_k,p_k)\}_{k=1}^{N_t},
 $$
 
-where \(X_k\) is the structural representation, \(s_k\) an earlier estimate, \(o_k\) an observed exploration outcome, \(\ell_k\) downstream relay evidence, and \(p_k\) provenance and evaluation context.
+where $X_k$ is the structural representation, $s_k$ an earlier estimate, $o_k$ an observed exploration outcome, $\ell_k$ downstream relay evidence, and $p_k$ provenance and evaluation context.
 
 A new question can be evaluated against both current candidate peers and relevant historical questions. Historical examples provide prior estimates of feasibility, knowledge gain, resource cost, recurring dead ends, and productive transfer patterns.
 
@@ -186,7 +186,7 @@ $$
 \widehat{V}_t(q)=F_\theta\big(H(q),operatorname{Retrieve}(\mathcal{H}_t,q),c_t\big),
 $$
 
-where \(F_\theta\) may be retrieval plus rules, a statistical ranker, a differential-tree model, or an LLM-based evaluator. Cross-domain reuse requires typed alignment and an explicit transfer uncertainty penalty or calibrated uncertainty estimate.
+where $F_\theta$ may be retrieval plus rules, a statistical ranker, a differential-tree model, or an LLM-based evaluator. Cross-domain reuse requires typed alignment and an explicit transfer uncertainty penalty or calibrated uncertainty estimate.
 
 ### 6.2 Question Differential Trees
 
@@ -196,7 +196,7 @@ Question differential trees record reusable core structures and modifications to
 
 AQSI may begin without a single specified target question. This does **not** mean the system is free of preferences, evaluation conventions, or resource constraints. A research control plane can provide broad policies without dictating the precise questions to ask.
 
-For a candidate set \(Q=\{q_1,\dots,q_n\}\), one baseline is the pairwise matrix
+For a candidate set $Q=\{q_1,\dots,q_n\}$, one baseline is the pairwise matrix
 
 $$
 M_{ij}=I_t(q_i\rightarrow q_j\mid c),\qquad M_{ii}=0,
@@ -216,14 +216,14 @@ A dense cluster of similar questions may dominate simple row sums. Suggested con
 
 ### 7.2 A portfolio objective
 
-A policy may select a subset \(P\subseteq Q\) under budget \(B\):
+A policy may select a subset $P\subseteq Q$ under budget $B$:
 
 $$
 P^*=\arg\max_{P\subseteq Q,\ C(P)\le B}
 operatorname{Utility}_{\pi_t}(P\mid\mathcal{H}_t,G_t),
 $$
 
-where \(\pi_t\) is a versioned governance policy. The utility is not presumed universal and should be made inspectable.
+where $\pi_t$ is a versioned governance policy. The utility is not presumed universal and should be made inspectable.
 
 ## 8. Structure-First Question Generation
 
