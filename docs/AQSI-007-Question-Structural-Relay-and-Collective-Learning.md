@@ -159,14 +159,14 @@ $$
 H(q_i)=\{h_{i1},\ldots,h_{im_i}\}.
 $$
 
-A directed influence estimate from question \(q_i\) to \(q_j\) can be expressed as:
+A directed influence estimate from question $q_i$ to $q_j$ can be expressed as:
 
 $$
 I(q_i\!\rightarrow\!q_j)=operatorname{Fold}_{a,b,r}
 \left(w_{abr}\,R_r(h_{ia},h_{jb})\right),
 $$
 
-where \(R_r\) is a typed relation scorer and \(w_{abr}\) is a context-dependent weight. This extends beyond concept-to-concept association to methods, constraints, evidence, assumptions, failures, and potential transfer points. Direction matters: a technique from question A may help question B without the reverse being true.
+where $R_r$ is a typed relation scorer and $w_{abr}$ is a context-dependent weight. This extends beyond concept-to-concept association to methods, constraints, evidence, assumptions, failures, and potential transfer points. Direction matters: a technique from question A may help question B without the reverse being true.
 
 **Unknown is not zero.** Missing relation evidence should be represented separately from an observed weak or negative relation. An influence estimate is also not equivalent to actual scientific value: it is a routing hypothesis to be calibrated by outcomes.
 
@@ -178,7 +178,7 @@ U(r\mid\mathcal H,\pi)
 -\lambda C(r)-\mu T(r),
 $$
 
-where \(\mathcal H\) is historical evidence, \(\pi\) is an authorized policy, \(C\) is resource cost, and \(T\) is semantic or operational transfer risk. This equation is a **candidate objective**, not an established empirical law. Alternative evaluators and non-scalar Pareto selection should remain possible.
+where $\mathcal H$ is historical evidence, $\pi$ is an authorized policy, $C$ is resource cost, and $T$ is semantic or operational transfer risk. This equation is a **candidate objective**, not an established empirical law. Alternative evaluators and non-scalar Pareto selection should remain possible.
 
 ## 7. Relay Lifecycle and State Transitions
 
@@ -242,7 +242,7 @@ This architecture supports heterogeneous contributors: LLM-based researchers, sy
 
 ### 8.1 A relay graph, not a single linear chain
 
-Let \(G_t=(V_t,E_t)\) be a versioned graph whose nodes include QUs, ERs, RPs, evidence objects, and policies. Edges identify derivation, support, contradiction, analogy, transfer, replication, and supersession. The graph may contain branching and convergence; provenance edges should remain acyclic with respect to creation history, even when semantic influence links form cycles.
+Let $G_t=(V_t,E_t)$ be a versioned graph whose nodes include QUs, ERs, RPs, evidence objects, and policies. Edges identify derivation, support, contradiction, analogy, transfer, replication, and supersession. The graph may contain branching and convergence; provenance edges should remain acyclic with respect to creation history, even when semantic influence links form cycles.
 
 A question can contribute to several later discoveries, and several questions can jointly produce one relay piece. This is why **lineage** and **influence** must be modeled separately.
 

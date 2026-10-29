@@ -189,15 +189,15 @@ The percentages are hypothetical examples, not recommended universal thresholds.
 
 ## 6. Strategic Guidance Is Not a Hidden Target Function
 
-AQSI-005 proposes goal-open question evaluation based on structural influence within a candidate ecology. For a candidate set \(Q\), an illustrative baseline is:
+AQSI-005 proposes goal-open question evaluation based on structural influence within a candidate ecology. For a candidate set $Q$, an illustrative baseline is:
 
 $$
 S_{\mathrm{open}}(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j),
 $$
 
-where \(I\) is a directed, multi-granularity influence estimate. This score describes a hypothesized structural role, not verified scientific merit.
+where $I$ is a directed, multi-granularity influence estimate. This score describes a hypothesized structural role, not verified scientific merit.
 
-A strategic policy \(\pi\) can be applied at the **eligibility and portfolio layers** without rewriting the definition of structural influence:
+A strategic policy $\pi$ can be applied at the **eligibility and portfolio layers** without rewriting the definition of structural influence:
 
 $$
 Q_{\pi}=\{q\in Q:operatorname{Eligible}(q,\pi)=1\},
@@ -209,7 +209,7 @@ P^*\in\underset{P\subseteq Q_{\pi}}{operatorname{argmax}}
 \quad\text{subject to}\quad C_k(P,\pi)\le 0.
 $$
 
-Here \(\mathcal H\) is historical question intelligence, \(\mathcal E\) is current evidence, \(U\) is a declared, replaceable portfolio evaluator, and \(C_k\) are explicit constraints. This formulation allows multiple legitimate scoring strategies and prevents a strategic preference from being mistaken for an intrinsic truth about a question.
+Here $\mathcal H$ is historical question intelligence, $\mathcal E$ is current evidence, $U$ is a declared, replaceable portfolio evaluator, and $C_k$ are explicit constraints. This formulation allows multiple legitimate scoring strategies and prevents a strategic preference from being mistaken for an intrinsic truth about a question.
 
 A governance system should distinguish **hard constraints**, **soft preferences**, **protected exploratory allocations**, and **unknown or disputed criteria**.
 
@@ -217,13 +217,13 @@ A governance system should distinguish **hard constraints**, **soft preferences*
 
 Strategic relevance cannot be reduced to a single keyword match between a question and a policy topic. A question may contribute indirectly through a method, measurement technique, mathematical representation, transferable tool, missing evidence, or shared structural residual.
 
-Let a Question Unit \(q\) contain typed structural factors:
+Let a Question Unit $q$ contain typed structural factors:
 
 $$
 X(q)=\{x_1,\ldots,x_m\},
 $$
 
-and let a strategic direction \(d\) contain policy-relevant factors:
+and let a strategic direction $d$ contain policy-relevant factors:
 
 $$
 Y(d)=\{y_1,\ldots,y_n\}.
@@ -236,7 +236,7 @@ R(q\rightarrow d)=operatorname{Fold}_{a,b}
 \left[w_{ab}\,\rho(x_a\rightarrow y_b\mid\mathcal E,\tau)\right],
 $$
 
-where \(\tau\) denotes type and semantic alignment, potentially supported by Universal Typing and Naming (UTN). The fold may preserve separate dimensions rather than collapsing them into one number.
+where $\tau$ denotes type and semantic alignment, potentially supported by Universal Typing and Naming (UTN). The fold may preserve separate dimensions rather than collapsing them into one number.
 
 Possible factor categories include:
 
@@ -287,7 +287,7 @@ Where historical data are available, assess whether readiness predictions discri
 
 ## 9. Research Portfolio Design Under Scarcity
 
-A practical SQCP must allocate finite resources. The portfolio should be evaluated as a **set with dependencies**, not merely as the top \(k\) individually scored questions.
+A practical SQCP must allocate finite resources. The portfolio should be evaluated as a **set with dependencies**, not merely as the top $k$ individually scored questions.
 
 An illustrative portfolio objective is:
 
@@ -520,7 +520,7 @@ A minimal SQCP demonstration need not control a real funding agency. It can use 
 
 **M1 — Policy-aware ranking:** compare structural question scores against eligibility and strategic relevance; verify that scoring and authorization remain separate.
 
-**M2 — Portfolio allocation:** allocate a fixed budget across several research areas with diversity, exploration, and replication constraints; compare to top-\(k\) baselines.
+**M2 — Portfolio allocation:** allocate a fixed budget across several research areas with diversity, exploration, and replication constraints; compare to top-$k$ baselines.
 
 **M3 — Exploration and relay:** simulate or conduct low-risk explorations with Question Units, Exploration Contracts, evidence records, and policy-review proposals.
 
@@ -556,7 +556,7 @@ Each hypothesis requires a preregistered outcome definition, relevant baseline, 
 
 - **B0 — Human-only allocation:** experts choose questions without AQSI scoring.
 - **B1 — LLM-only strategic ranking:** one model ranks question descriptions against a policy prompt.
-- **B2 — Greedy structural ranking:** top-\(k\) questions by AQSI-005 score, without portfolio constraints.
+- **B2 — Greedy structural ranking:** top-$k$ questions by AQSI-005 score, without portfolio constraints.
 - **B3 — Policy-keyword filtering:** simple eligibility and topic similarity rules.
 - **B4 — SQCP without historical learning:** policy-aware portfolio selection, no HQI.
 - **B5 — SQCP without protected exploration:** same architecture, no diversity or novelty allocation.

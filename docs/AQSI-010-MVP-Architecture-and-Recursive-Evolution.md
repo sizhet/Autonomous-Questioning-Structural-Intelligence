@@ -176,14 +176,14 @@ A candidate is not accepted merely because it is grammatically well formed. It m
 
 ### 6.1 Directed influence
 
-For question units \(q_i\) and \(q_j\), let \(H(q)\) denote the set of structural factors attached to a question. A general directional influence estimate is:
+For question units $q_i$ and $q_j$, let $H(q)$ denote the set of structural factors attached to a question. A general directional influence estimate is:
 
 $$
 \widehat I(q_i\!\rightarrow\!q_j) = operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \bigl(w_{ab},\,R(h_{ia},h_{jb}),\,E_{ab},\,U_{ab}\bigr).
 $$
 
-Here \(R\) represents a typed relation; \(E\) captures supporting or opposing evidence; \(U\) captures uncertainty; and `Fold` is a configurable aggregation operator. No single linear aggregation is presumed universally correct. In general,
+Here $R$ represents a typed relation; $E$ captures supporting or opposing evidence; $U$ captures uncertainty; and `Fold` is a configurable aggregation operator. No single linear aggregation is presumed universally correct. In general,
 
 $$
 \widehat I(q_i\!\rightarrow\!q_j) \neq
@@ -200,7 +200,7 @@ $$
 P(Y_q\mid X_q,\mathcal H_t,\pi_t),
 $$
 
-where \(X_q\) denotes structural features, \(\mathcal H_t\) the historical corpus, and \(\pi_t\) the historical selection policy. Conditioning on the selection policy matters because previously explored questions are not a random sample of all candidates.
+where $X_q$ denotes structural features, $\mathcal H_t$ the historical corpus, and $\pi_t$ the historical selection policy. Conditioning on the selection policy matters because previously explored questions are not a random sample of all candidates.
 
 The MVP should support an explicit **defer/revisit** decision. Low predicted value must not mean irreversible deletion, especially for novel question families with little historical coverage.
 
@@ -212,7 +212,7 @@ $$
 q_k = operatorname{Instantiate}(C,\Delta_k,\Gamma_k),
 $$
 
-where \(C\) is a shared core, \(\Delta_k\) is a question-specific structural delta, and \(\Gamma_k\) is the relevant domain and evidence context. QDTs may improve retrieval and transfer, but their compression and scoring value must be measured rather than assumed.
+where $C$ is a shared core, $\Delta_k$ is a question-specific structural delta, and $\Gamma_k$ is the relevant domain and evidence context. QDTs may improve retrieval and transfer, but their compression and scoring value must be measured rather than assumed.
 
 ## 7. Goal-Open Scoring and Portfolio Selection
 
@@ -232,7 +232,7 @@ P_t^* \in \arg\max_{P\subseteq Q_t}
 \quad \text{subject to } C(P)\le B_t,\;P\in\mathcal F_t.
 $$
 
-Here \(B_t\) is the authorized budget and \(\mathcal F_t\) is the set of policy-compliant portfolios. The value function may incorporate expected information gain, structural relay potential, diversity, redundancy, confidence, and deferred exploration opportunities. These are candidate objectives to compare empirically, not mandatory additive bonuses.
+Here $B_t$ is the authorized budget and $\mathcal F_t$ is the set of policy-compliant portfolios. The value function may incorporate expected information gain, structural relay potential, diversity, redundancy, confidence, and deferred exploration opportunities. These are candidate objectives to compare empirically, not mandatory additive bonuses.
 
 A minimal portfolio should include a controlled exploration allocation for uncertain, historically underrepresented question families. Its size is a policy choice, not a universal constant.
 
@@ -381,7 +381,7 @@ AQSI distinguishes three evolution loops:
 
 **Loop C — Architecture and governance proposals.** The system may propose new discovery operators, portfolio policies, relay contracts, or resource strategies. Adoption requires an authorized evaluator, sandbox testing, and an explicit approval path.
 
-A candidate improvement \(\Delta_t\) is accepted only if its evaluation satisfies predetermined constraints:
+A candidate improvement $\Delta_t$ is accepted only if its evaluation satisfies predetermined constraints:
 
 $$
 operatorname{Accept}(\Delta_t)=
@@ -411,7 +411,7 @@ The notation is illustrative: practical acceptance may require confidence interv
 - Does structured historical retrieval reduce redundant or low-value exploration?
 - Do multi-granularity factors improve prediction of useful downstream research outcomes?
 - Does directed influence provide information beyond symmetric similarity?
-- Does portfolio selection outperform top-\(k\) independent question ranking at equal cost?
+- Does portfolio selection outperform top-$k$ independent question ranking at equal cost?
 - Does structure-first generation uncover useful questions missed by LLM-first generation?
 - Does typed cross-domain relay improve transfer validity?
 - Does controlled recursive evolution yield sustained held-out gains rather than benchmark overfitting?
@@ -424,7 +424,7 @@ The notation is illustrative: practical acceptance may require confidence interv
 | B1 | LLM + ordinary retrieval | Value of typed question history |
 | B2 | Historical scoring without QDT | Value of differential-tree organization |
 | B3 | Symmetric similarity graph | Value of directional influence |
-| B4 | Single-score top-\(k\) selection | Value of portfolio optimization |
+| B4 | Single-score top-$k$ selection | Value of portfolio optimization |
 | B5 | Cross-domain transfer without UTN checks | Value of typed alignment |
 | B6 | Repeated prompting without relay contracts | Value of structured relay |
 | B7 | Self-tuning without held-out gates | Value of controlled recursive improvement |
@@ -449,7 +449,7 @@ Delayed value should be reported at fixed follow-up horizons to avoid selectivel
 | H2 | Multi-granularity typed influence improves downstream utility prediction. | Equal or worse calibration and ranking than simpler semantic similarity. |
 | H3 | Directional influence adds predictive value beyond symmetric relations. | No incremental predictive performance after controlling for graph complexity. |
 | H4 | Structure-first generation adds valuable candidates beyond LLM-first generation. | Added candidates are mostly redundant, invalid, or too costly to validate. |
-| H5 | Portfolio selection yields better verified outcomes than independent top-\(k\). | No equal-budget gain or excessive diversity-related opportunity cost. |
+| H5 | Portfolio selection yields better verified outcomes than independent top-$k$. | No equal-budget gain or excessive diversity-related opportunity cost. |
 | H6 | QDTs improve reuse and adaptation of historical question patterns. | No gain in retrieval, transfer, or cost after representation overhead. |
 | H7 | UTN alignment reduces harmful cross-domain transfer. | Error rates do not improve, or alignment blocks useful transfer disproportionately. |
 | H8 | Explicit relay increases cumulative reusable knowledge. | No measurable downstream reuse or quality advantage over unstructured notes. |

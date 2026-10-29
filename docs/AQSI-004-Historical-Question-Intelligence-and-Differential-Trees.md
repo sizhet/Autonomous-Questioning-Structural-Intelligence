@@ -131,15 +131,15 @@ Let a question have a structural representation:
 X(q) = (C,A,M,H,E,R,P)
 $$
 
-where \(C\) denotes concepts, \(A\) attributes, \(M\) methods, \(H\) assumptions/hypotheses, \(E\) evidence, \(R\) residuals, and \(P\) perspective or policy context. These components may themselves be structured and multi-granular.
+where $C$ denotes concepts, $A$ attributes, $M$ methods, $H$ assumptions/hypotheses, $E$ evidence, $R$ residuals, and $P$ perspective or policy context. These components may themselves be structured and multi-granular.
 
-For a question family with core \(X_0\), a variant is represented as:
+For a question family with core $X_0$, a variant is represented as:
 
 \[
 X(q_i) = operatorname{Apply}(X_0,\Delta_i)
 $$
 
-Here \(\Delta_i\) is a typed set of edits, not necessarily numeric subtraction.
+Here $\Delta_i$ is a typed set of edits, not necessarily numeric subtraction.
 
 ### 4.1 Example family
 
@@ -192,7 +192,7 @@ UTN supplies addressability and candidate type mappings; it does not guarantee s
 
 ### 5.1 Directional transfer
 
-A method previously useful for question \(q_i\) may help question \(q_j\), even if the reverse transfer is not plausible. Thus, in general:
+A method previously useful for question $q_i$ may help question $q_j$, even if the reverse transfer is not plausible. Thus, in general:
 
 \[
 I(q_i \rightarrow q_j) \neq I(q_j \rightarrow q_i)
@@ -204,13 +204,13 @@ A directional score can combine relation type, granularity, historical evidence,
 
 ## 6. Learning to Score New Questions from Historical Experience
 
-Let historical experience at time \(t\) be:
+Let historical experience at time $t$ be:
 
 \[
 \mathcal{H}_t = \{(X_i,\hat{s}_i,y_i,c_i,\pi_i,\tau_i)\}_{i=1}^{N_t}
 $$
 
-where \(X_i\) is a structured question, \(\hat{s}_i\) its pre-exploration estimate, \(y_i\) the observed validated outcome, \(c_i\) cost, \(\pi_i\) selection policy, and \(\tau_i\) observation time.
+where $X_i$ is a structured question, $\hat{s}_i$ its pre-exploration estimate, $y_i$ the observed validated outcome, $c_i$ cost, $\pi_i$ selection policy, and $\tau_i$ observation time.
 
 A learned evaluator estimates:
 
@@ -218,7 +218,7 @@ A learned evaluator estimates:
 \hat{V}_t(q\mid p,b)=F_{\theta_t}(X(q),\mathcal{H}_t,p,b)
 $$
 
-where \(p\) is the current policy and \(b\) the available budget. \(F\) may be a retrieval-based estimator, rules engine, differential tree, statistical model, LLM-assisted evaluator, or ensemble.
+where $p$ is the current policy and $b$ the available budget. $F$ may be a retrieval-based estimator, rules engine, differential tree, statistical model, LLM-assisted evaluator, or ensemble.
 
 ### 6.1 Distinguish forecast from outcome
 
@@ -317,13 +317,13 @@ A baseline group score is:
 S_{\mathrm{group}}(q_i)=\sum_{j\ne i} I(q_i\rightarrow q_j)
 $$
 
-This can be compared with a history-conditioned score \(\hat V_t(q_i)\). One experimental fusion is:
+This can be compared with a history-conditioned score $\hat V_t(q_i)$. One experimental fusion is:
 
 \[
 S(q_i)=operatorname{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
 $$
 
-where \(U_t\) represents uncertainty or unexplored potential and \(operatorname{Fold}_p\) is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
+where $U_t$ represents uncertainty or unexplored potential and $operatorname{Fold}_p$ is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
 
 A portfolio selector should also consider diversity, dependency, shared cost, and budget. Otherwise densely connected, well-studied question clusters may dominate frontier candidates.
 

@@ -98,19 +98,19 @@ $$
 Q_i = (\mathrm{id}_i, D_i, \mathcal{U}_i, \mathcal{R}_i, E_i, H_i, P_i),
 $$
 
-where \(D_i\) denotes domain context, \(\mathcal{U}_i\) typed structural units, \(\mathcal{R}_i\) relations among those units, \(E_i\) evidence, \(H_i\) historical links, and \(P_i\) provenance and permissions. This is a *logical interface*, not a requirement to materialize a complete graph.
+where $D_i$ denotes domain context, $\mathcal{U}_i$ typed structural units, $\mathcal{R}_i$ relations among those units, $E_i$ evidence, $H_i$ historical links, and $P_i$ provenance and permissions. This is a *logical interface*, not a requirement to materialize a complete graph.
 
 A structural unit may be a concept, attribute, method, constraint, hypothesis, evidence item, failure mode, research question, or entire subgraph. Implementations may use LLM-extracted records, differential trees, knowledge graphs, relational tables, rule engines, or hybrid stores.
 
 ### 3.1 Typed structural correspondence
 
-For source unit \(u \in \mathcal U_s\) and target unit \(v \in \mathcal U_t\), a candidate mapping is
+For source unit $u \in \mathcal U_s$ and target unit $v \in \mathcal U_t$, a candidate mapping is
 
 $$
  m=(u,v,r,\phi,\kappa,\epsilon),
 $$
 
-where \(r\) is a proposed relation (analogy, method applicability, constraint correspondence, contradiction, etc.), \(\phi\) is a transformation or adapter, \(\kappa\) is its stated applicability contract, and \(\epsilon\) records evidence and uncertainty.
+where $r$ is a proposed relation (analogy, method applicability, constraint correspondence, contradiction, etc.), $\phi$ is a transformation or adapter, $\kappa$ is its stated applicability contract, and $\epsilon$ records evidence and uncertainty.
 
 Mapping is often **partial**: only some source units have target correspondences. One-to-many, many-to-one, and hierarchical mappings should be allowed when their contracts are explicit.
 
@@ -137,22 +137,22 @@ Treating all five as a generic similarity edge is an avoidable source of false t
 
 Cross-domain transfer is generally asymmetric. A method validated for one data regime may be useful in another, while the reverse mapping is invalid. A question in domain A may reveal a missing assumption in domain B without B offering a useful solution to A.
 
-Let \(I_{s\rightarrow t}\) denote the *estimated research influence* of a source question or structural unit on a target. In general,
+Let $I_{s\rightarrow t}$ denote the *estimated research influence* of a source question or structural unit on a target. In general,
 
 $$
 I_{s\rightarrow t}\neq I_{t\rightarrow s}.
 $$
 
-For candidate mappings \(\mathcal M_{s,t}\), one possible score is
+For candidate mappings $\mathcal M_{s,t}$, one possible score is
 
 $$
 \widehat I_{s\rightarrow t}=operatorname{Fold}_{m\in\mathcal M_{s,t}}
 \bigl(w_m\,a_m\,e_m\,g_m\bigr),
 $$
 
-where \(a_m\) estimates alignment quality, \(e_m\) evidential support, \(g_m\) expected target usefulness under the declared contract, and \(w_m\) is a calibrated, policy-appropriate weight. **Fold** is a configurable aggregation operator, not necessarily a sum. Correlated evidence and duplicate mappings must be accounted for; otherwise the score can be inflated by representational redundancy.
+where $a_m$ estimates alignment quality, $e_m$ evidential support, $g_m$ expected target usefulness under the declared contract, and $w_m$ is a calibrated, policy-appropriate weight. **Fold** is a configurable aggregation operator, not necessarily a sum. Correlated evidence and duplicate mappings must be accounted for; otherwise the score can be inflated by representational redundancy.
 
-A separate uncertainty record \(U_{s\rightarrow t}\) should accompany the estimate. Unknown mappings should not be assigned a fabricated numerical zero. Implementations may use intervals, confidence categories, probability distributions, or explicit missingness, but must state what those values mean.
+A separate uncertainty record $U_{s\rightarrow t}$ should accompany the estimate. Unknown mappings should not be assigned a fabricated numerical zero. Implementations may use intervals, confidence categories, probability distributions, or explicit missingness, but must state what those values mean.
 
 ### 4.1 Transfer is not merely similarity
 
@@ -167,7 +167,7 @@ $$
 =F_\theta(X_t,m,\mathcal H),
 $$
 
-where \(X_t\) is target structure and \(\mathcal H\) contains prior questions, attempted transfers, outcomes, costs, and delayed relay effects. This is a prediction to be calibrated, not an observed value. The model must account for selective exploration: historically untried transfers are not known failures.
+where $X_t$ is target structure and $\mathcal H$ contains prior questions, attempted transfers, outcomes, costs, and delayed relay effects. This is a prediction to be calibrated, not an observed value. The model must account for selective exploration: historically untried transfers are not known failures.
 
 ---
 
@@ -210,13 +210,13 @@ Q_s=C_s\oplus\Delta_s,\qquad
 Q_t=C_t\oplus\Delta_t,
 $$
 
-where \(\oplus\) denotes a representation-specific composition operator. Cross-domain alignment attempts to identify a transferable substructure \(C^*\) and the adaptations needed to apply it in the target:
+where $\oplus$ denotes a representation-specific composition operator. Cross-domain alignment attempts to identify a transferable substructure $C^*$ and the adaptations needed to apply it in the target:
 
 $$
 T_{s\rightarrow t}=(C^*,\Delta_{s\rightarrow t},\kappa,E,U).
 $$
 
-The transfer delta \(\Delta_{s\rightarrow t}\) should explicitly include changed assumptions, new measurements, incompatible dependencies, and missing evidence. It is not simply a textual paraphrase.
+The transfer delta $\Delta_{s\rightarrow t}$ should explicitly include changed assumptions, new measurements, incompatible dependencies, and missing evidence. It is not simply a textual paraphrase.
 
 ### 6.1 Differential reuse and caution
 
@@ -322,7 +322,7 @@ $$
 h_k=(m_k,\kappa_k,c_k,o_k,e_k,r_k,\tau_k),
 $$
 
-where \(m_k\) is the mapping, \(\kappa_k\) its contract, \(c_k\) exploration cost, \(o_k\) observed outcome, \(e_k\) evidence, \(r_k\) downstream relay, and \(\tau_k\) evaluation horizon.
+where $m_k$ is the mapping, $\kappa_k$ its contract, $c_k$ exploration cost, $o_k$ observed outcome, $e_k$ evidence, $r_k$ downstream relay, and $\tau_k$ evaluation horizon.
 
 A successful source-to-target transfer may be informative for another target only when the relevant applicability conditions align. UTN facilitates *conditional reuse* rather than unrestricted propagation of scores.
 
@@ -344,7 +344,7 @@ Historical scores may reproduce past institutional priorities, data availability
 
 AQSI-005 considers goal-open question scoring and portfolio selection. UTN-mediated transfer contributes new candidate relations and evidence, but should not silently replace the broader portfolio objective.
 
-For candidate target question \(q\), one illustrative decomposition is:
+For candidate target question $q$, one illustrative decomposition is:
 
 $$
 \widehat S(q)=operatorname{Fold}\bigl(
@@ -355,7 +355,7 @@ U(q),C(q)
 \bigr),
 $$
 
-where \(S_{\mathrm{cross}}\) is a transfer-informed score, \(U\) captures uncertainty, and \(C\) captures expected exploration cost. This is a design space, not a universal additive scoring law. Any implementation must state whether its fold represents utility, ranking, risk, or a multi-objective comparison.
+where $S_{\mathrm{cross}}$ is a transfer-informed score, $U$ captures uncertainty, and $C$ captures expected exploration cost. This is a design space, not a universal additive scoring law. Any implementation must state whether its fold represents utility, ranking, risk, or a multi-objective comparison.
 
 ### 10.1 Diversity and redundancy
 

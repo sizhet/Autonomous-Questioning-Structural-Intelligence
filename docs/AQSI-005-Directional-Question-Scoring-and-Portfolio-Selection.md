@@ -75,12 +75,12 @@ $$
 
 where:
 
-- \(X_i\) is its multi-granularity structural description;
-- \(P_i\) is provenance and generation pathway;
-- \(E_i\) is supporting and counter-evidence;
-- \(H_i\) references relevant historical questions and outcomes;
-- \(C_i\) is estimated exploration cost and resource demand;
-- \(L_i\) is lifecycle state, including deferred or revisitable states.
+- $X_i$ is its multi-granularity structural description;
+- $P_i$ is provenance and generation pathway;
+- $E_i$ is supporting and counter-evidence;
+- $H_i$ references relevant historical questions and outcomes;
+- $C_i$ is estimated exploration cost and resource demand;
+- $L_i$ is lifecycle state, including deferred or revisitable states.
 
 A structural description is a collection of typed factors:
 
@@ -88,7 +88,7 @@ $$
 X_i = \{(x_{ia},\tau_{ia},\rho_{ia})\}_{a=1}^{m_i},
 $$
 
-where \(\tau\) is a UTN-aligned type and \(\rho\) carries context, granularity, and provenance. A factor may represent a concept, method, measurement, missing relation, assumption, failure mode, evidence item, or prospective transfer point.
+where $\tau$ is a UTN-aligned type and $\rho$ carries context, granularity, and provenance. A factor may represent a concept, method, measurement, missing relation, assumption, failure mode, evidence item, or prospective transfer point.
 
 An **influence estimate** between questions is a structured object, not just a number:
 
@@ -96,13 +96,13 @@ $$
 \widehat{I}_{ij} = (\mu_{ij}, U_{ij}, Z_{ij}, V_{ij}),
 $$
 
-where \(\mu_{ij}\) is estimated directional effect, \(U_{ij}\) its uncertainty, \(Z_{ij}\) its supporting factor/evidence trace, and \(V_{ij}\) the estimator and calibration version. Missing estimates are explicitly marked `unknown`.
+where $\mu_{ij}$ is estimated directional effect, $U_{ij}$ its uncertainty, $Z_{ij}$ its supporting factor/evidence trace, and $V_{ij}$ the estimator and calibration version. Missing estimates are explicitly marked `unknown`.
 
 ## 4. Multi-Granularity Directional Influence
 
 ### 4.1 Factor-level influence
 
-For factors \(x_{ia}\) and \(x_{jb}\), define a typed directional relationship operator:
+For factors $x_{ia}$ and $x_{jb}$, define a typed directional relationship operator:
 
 $$
 r_{ab}^{i\to j} = R_{\theta}(x_{ia},x_{jb}\mid\tau_{ia},\tau_{jb},c_t).
@@ -163,7 +163,7 @@ S_{\mathrm{avg}}(q_i)=
 {\sum_{j\ne i}a_j},
 $$
 
-where \(a_j\) expresses an explicitly governed importance or sampling weight. This is defined only over eligible, estimated edges, with a separate coverage report. If the denominator is zero, the score is *undefined*, not zero.
+where $a_j$ expresses an explicitly governed importance or sampling weight. This is defined only over eligible, estimated edges, with a separate coverage report. If the denominator is zero, the score is *undefined*, not zero.
 
 A coverage statistic is:
 
@@ -171,11 +171,11 @@ $$
 \kappa_i=\frac{|\{j\ne i:\widehat{I}_{ij}\text{ estimated}\}|}{n-1},
 $$
 
-for \(n>1\). Coverage should accompany scores, not automatically become an arbitrary score bonus.
+for $n>1$. Coverage should accompany scores, not automatically become an arbitrary score bonus.
 
 ### 5.2 Influence reach and indirect effects
 
-Some questions affect others through multi-hop dependencies. For a suitably normalized influence operator \(A\), one candidate extension is:
+Some questions affect others through multi-hop dependencies. For a suitably normalized influence operator $A$, one candidate extension is:
 
 $$
 S_{\mathrm{reach}}(q_i)=\sum_{k=1}^{K}\lambda_k\sum_j(A^k)_{ij}.
@@ -195,7 +195,7 @@ $$
 \mathcal{H}_t=\{(q_h,X_h,A_h,O_h,R_h,T_h)\},
 $$
 
-where \(A_h\) records the decision to explore or defer, \(O_h\) the observed result, \(R_h\) the subsequent relay value, and \(T_h\) the observation horizon.
+where $A_h$ records the decision to explore or defer, $O_h$ the observed result, $R_h$ the subsequent relay value, and $T_h$ the observation horizon.
 
 A historical estimator can produce a vector of predicted outcomes:
 
@@ -217,7 +217,7 @@ $$
 \mathcal{E}_i,\mathcal{D}_i\big),
 $$
 
-where \(\mathcal{E}_i\) tracks evidence lineage and \(\mathcal{D}_i\) records dependencies between estimators. A simple weighted combination is allowed only when its calibration and overlap assumptions are documented.
+where $\mathcal{E}_i$ tracks evidence lineage and $\mathcal{D}_i$ records dependencies between estimators. A simple weighted combination is allowed only when its calibration and overlap assumptions are documented.
 
 ### 6.2 Selection bias and delayed outcomes
 
@@ -227,7 +227,7 @@ Delayed downstream value must be attributed cautiously. A question that precedes
 
 ## 7. From Individual Scores to Portfolio Selection
 
-Let \(P\subseteq Q_t\) be the selected portfolio and \(B\) the available budget. A generic constrained objective is:
+Let $P\subseteq Q_t$ be the selected portfolio and $B$ the available budget. A generic constrained objective is:
 
 $$
 \max_{P\subseteq Q_t}\;F(P\mid\pi_t,\mathcal H_t)
@@ -235,7 +235,7 @@ $$
 \sum_{q_i\in P}c_i\le B,\;P\in\mathcal A(\pi_t),
 $$
 
-where \(\pi_t\) is an authorized policy and \(\mathcal A(\pi_t)\) is its admissible portfolio family.
+where $\pi_t$ is an authorized policy and $\mathcal A(\pi_t)$ is its admissible portfolio family.
 
 One *illustrative*, non-canonical decomposition is:
 
