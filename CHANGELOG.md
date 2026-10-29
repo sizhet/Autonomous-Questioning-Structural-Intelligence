@@ -18,7 +18,7 @@ The format follows the principles of [Keep a Changelog](https://keepachangelog.c
 
 > These items are research directions, not committed deliverables or claims of completed work.
 
-## [1.0.0] — 2026-10-28
+## [1.0.0] — 2026-10-29
 
 ### Added — Research foundation
 
