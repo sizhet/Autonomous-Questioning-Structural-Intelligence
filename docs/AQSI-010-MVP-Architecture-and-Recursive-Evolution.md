@@ -411,7 +411,7 @@ The notation is illustrative: practical acceptance may require confidence interv
 - Does structured historical retrieval reduce redundant or low-value exploration?
 - Do multi-granularity factors improve prediction of useful downstream research outcomes?
 - Does directed influence provide information beyond symmetric similarity?
-- Does portfolio selection outperform top-$k$ independent question ranking at equal cost?
+- Does portfolio selection outperform top-k independent question ranking at equal cost?
 - Does structure-first generation uncover useful questions missed by LLM-first generation?
 - Does typed cross-domain relay improve transfer validity?
 - Does controlled recursive evolution yield sustained held-out gains rather than benchmark overfitting?
@@ -424,7 +424,7 @@ The notation is illustrative: practical acceptance may require confidence interv
 | B1 | LLM + ordinary retrieval | Value of typed question history |
 | B2 | Historical scoring without QDT | Value of differential-tree organization |
 | B3 | Symmetric similarity graph | Value of directional influence |
-| B4 | Single-score top-$k$ selection | Value of portfolio optimization |
+| B4 | Single-score top-k selection | Value of portfolio optimization |
 | B5 | Cross-domain transfer without UTN checks | Value of typed alignment |
 | B6 | Repeated prompting without relay contracts | Value of structured relay |
 | B7 | Self-tuning without held-out gates | Value of controlled recursive improvement |
@@ -449,7 +449,7 @@ Delayed value should be reported at fixed follow-up horizons to avoid selectivel
 | H2 | Multi-granularity typed influence improves downstream utility prediction. | Equal or worse calibration and ranking than simpler semantic similarity. |
 | H3 | Directional influence adds predictive value beyond symmetric relations. | No incremental predictive performance after controlling for graph complexity. |
 | H4 | Structure-first generation adds valuable candidates beyond LLM-first generation. | Added candidates are mostly redundant, invalid, or too costly to validate. |
-| H5 | Portfolio selection yields better verified outcomes than independent top-$k$. | No equal-budget gain or excessive diversity-related opportunity cost. |
+| H5 | Portfolio selection yields better verified outcomes than independent top-k. | No equal-budget gain or excessive diversity-related opportunity cost. |
 | H6 | QDTs improve reuse and adaptation of historical question patterns. | No gain in retrieval, transfer, or cost after representation overhead. |
 | H7 | UTN alignment reduces harmful cross-domain transfer. | Error rates do not improve, or alignment blocks useful transfer disproportionately. |
 | H8 | Explicit relay increases cumulative reusable knowledge. | No measurable downstream reuse or quality advantage over unstructured notes. |
