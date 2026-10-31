@@ -100,7 +100,7 @@ A relation MAY connect factors of unequal granularity. A proposed analogy MUST N
 For a question pair `(q_i, q_j)` under context `c` and perspective `p`, define an **illustrative** estimator:
 
 $$
-\widehat I_{p,c}(q_i\rightarrow q_j) = operatorname{Fold}_{\phi,p,c}\left(\left\{
+\widehat I_{p,c}(q_i\rightarrow q_j) = mathrm{Fold}_{\phi,p,c}\left(\left\{
  w_{ab,p,c}\,R_{p,c}(h_{ia}\rightarrow h_{jb})
 \right\}_{(a,b)\in E_{ij}}\right).
 $$
@@ -214,9 +214,9 @@ A `PortfolioDecision` MUST specify the candidate-set snapshot, selected and defe
 Illustrative constrained selection:
 
 $$
-\max_{P\subseteq Q}\;operatorname{Value}_{p}(P)
+\max_{P\subseteq Q}\;mathrm{Value}_{p}(P)
 \quad\text{subject to}\quad
-operatorname{Cost}(P)\le B,\;P\in\mathcal F_p.
+mathrm{Cost}(P)\le B,\;P\in\mathcal F_p.
 $$
 
 `B` is a declared budget and `𝔽_p` is the feasible set under policy `p`. `Value_p` MAY account for complementarity, redundancy, diversity, replication, and strategic priorities. No particular objective is mandated. Portfolio selection MUST NOT itself grant execution permission.
