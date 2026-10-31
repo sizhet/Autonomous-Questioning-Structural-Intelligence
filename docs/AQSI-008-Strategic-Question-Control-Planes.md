@@ -520,7 +520,7 @@ A minimal SQCP demonstration need not control a real funding agency. It can use 
 
 **M1 — Policy-aware ranking:** compare structural question scores against eligibility and strategic relevance; verify that scoring and authorization remain separate.
 
-**M2 — Portfolio allocation:** allocate a fixed budget across several research areas with diversity, exploration, and replication constraints; compare to top-$k$ baselines.
+**M2 — Portfolio allocation:** allocate a fixed budget across several research areas with diversity, exploration, and replication constraints; compare to top-k baselines.
 
 **M3 — Exploration and relay:** simulate or conduct low-risk explorations with Question Units, Exploration Contracts, evidence records, and policy-review proposals.
 
