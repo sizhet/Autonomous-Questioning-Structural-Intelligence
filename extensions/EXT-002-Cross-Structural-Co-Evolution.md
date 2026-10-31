@@ -67,15 +67,15 @@ The table is intentionally pluralistic: an LLM, graph model, rule system, databa
 
 ## 3. The Cross-Structural Dependency Graph
 
-Let the research system at time \(t\) be a typed graph:
+Let the research system at time $t$ be a typed graph:
 
 $$
 \mathcal{G}_t=(\mathcal{V}_t,\mathcal{E}_t,\mathcal{C}_t,\mathcal{P}_t),
 $$
 
-where \(\mathcal{V}_t\) contains components, contracts, artifacts, and evaluators; \(\mathcal{E}_t\) contains typed dependencies and influence claims; \(\mathcal{C}_t\) contains compatibility and conformance requirements; and \(\mathcal{P}_t\) contains provenance and governance metadata.
+where $\mathcal{V}_t$ contains components, contracts, artifacts, and evaluators; $\mathcal{E}_t$ contains typed dependencies and influence claims; $\mathcal{C}_t$ contains compatibility and conformance requirements; and $\mathcal{P}_t$ contains provenance and governance metadata.
 
-An edge \(e_{ab}\) from component \(a\) to component \(b\) may mean **depends on**, **supplies evidence to**, **changes interpretation of**, **constrains**, or **proposes revision to**. These are not interchangeable relations. UTN-style type contracts should identify the intended meaning, source context, validity interval, and permitted consumers.
+An edge $e_{ab}$ from component $a$ to component $b$ may mean **depends on**, **supplies evidence to**, **changes interpretation of**, **constrains**, or **proposes revision to**. These are not interchangeable relations. UTN-style type contracts should identify the intended meaning, source context, validity interval, and permitted consumers.
 
 ### 3.1 Multi-granularity dependencies
 
@@ -186,15 +186,15 @@ The reverse direction is equally important: new UTN types may expose previously 
 
 A newly discovered question may reveal a factor missing from the influence model. Conversely, the model may detect an unexplained high-influence structural link and propose a new question.
 
-For question \(q_i\), let \(H(q_i)=\{h_{i1},\ldots,h_{im}\}\) be its heterogeneous typed factors. A candidate directional influence estimator is:
+For question $q_i$, let $H(q_i)=\{h_{i1},\ldots,h_{im}\}$ be its heterogeneous typed factors. A candidate directional influence estimator is:
 
 $$
 \widehat I_t(q_i\rightarrow q_j)
-=operatorname{Fold}_{\phi_t}
+=mathrm{Fold}_{\phi_t}
 \left(\{\widehat R_t(h_{ia},h_{jb}),w_{ab,t},u_{ab,t}\}_{a,b}\right),
 $$
 
-where \(\widehat R_t\) is a typed relation estimate, \(w_{ab,t}\) is a context-dependent weight, \(u_{ab,t}\) represents uncertainty or missingness, and \(\phi_t\) specifies the folding contract.
+where $\widehat R_t$ is a typed relation estimate, $w_{ab,t}$ is a context-dependent weight, $u_{ab,t}$ represents uncertainty or missingness, and $\phi_t$ specifies the folding contract.
 
 A proposed change to the factor vocabulary, relation model, or folding operator must be tested for:
 
@@ -261,7 +261,7 @@ All model and policy changes should pass predefined conformance and safety check
 
 ## 11. Multi-Perspective Co-Evolution Scoring
 
-A proposed change \(\Delta\) may improve one subsystem while harming another. Its evaluation should therefore be a vector rather than an unquestioned scalar:
+A proposed change $\Delta$ may improve one subsystem while harming another. Its evaluation should therefore be a vector rather than an unquestioned scalar:
 
 $$
 \mathbf{E}(\Delta)=
@@ -273,21 +273,21 @@ where the coordinates represent, respectively, question quality, transfer qualit
 A policy-approved aggregator may be used for a specific decision:
 
 $$
-U_{\pi}(\Delta)=operatorname{Aggregate}_{\pi}(\mathbf{E}(\Delta),\mathbf{u}(\Delta)),
+U_{\pi}(\Delta)=mathrm{Aggregate}_{\pi}(\mathbf{E}(\Delta),\mathbf{u}(\Delta)),
 $$
 
-where \(\pi\) denotes authorized priorities and constraints, and \(\mathbf{u}\) contains uncertainty estimates. Hard constraints—such as forbidden actions or failed provenance requirements—must not be traded away by a high aggregate score.
+where $\pi$ denotes authorized priorities and constraints, and $\mathbf{u}$ contains uncertainty estimates. Hard constraints—such as forbidden actions or failed provenance requirements—must not be traded away by a high aggregate score.
 
 ### 11.1 Interaction effects
 
-For changes \(\Delta_a\) and \(\Delta_b\), a hypothetical interaction term is:
+For changes $\Delta_a$ and $\Delta_b$, a hypothetical interaction term is:
 
 $$
 J(\Delta_a,\Delta_b)=
 U(\Delta_a\oplus\Delta_b)-U(\Delta_a)-U(\Delta_b)+U(\varnothing).
 $$
 
-Positive \(J\) suggests complementarity *under the chosen metric and experiment*; negative \(J\) suggests interference. The quantity is not inherently causal without an appropriate experimental design.
+Positive $J$ suggests complementarity *under the chosen metric and experiment*; negative $J$ suggests interference. The quantity is not inherently causal without an appropriate experimental design.
 
 ### 11.2 The improvement unit
 

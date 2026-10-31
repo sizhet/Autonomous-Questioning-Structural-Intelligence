@@ -88,28 +88,28 @@ where $Q_t$ is the Question Unit set; $F_t$ the multi-granularity structural fac
 
 The ecosystem evolves through candidate discovery, question derivation, evidence updates, relays, merges, revisits, and retirement or deferral. **Retirement does not imply deletion**: negative outcomes and unresolved residuals remain available for historical retrieval and future reinterpretation.
 
-A useful growth measure must discount duplicate, unsupported, and semantically empty expansion. For example, define an illustrative *verified structural contribution* over a window \(W\):
+A useful growth measure must discount duplicate, unsupported, and semantically empty expansion. For example, define an illustrative *verified structural contribution* over a window $W$:
 
 $$
 G_W = \sum_{r\in \mathcal R_W} w(r)\,v(r) - \lambda D_W - \mu K_W,
 $$
 
-where \(\mathcal R_W\) are relay contributions, \(v(r)\) is an independently evaluated value, \(D_W\) is measured redundancy, and \(K_W\) is resource cost. The weights and evaluation protocol must be declared before experiments. This is a proposed metric family, not a universal intelligence equation.
+where $\mathcal R_W$ are relay contributions, $v(r)$ is an independently evaluated value, $D_W$ is measured redundancy, and $K_W$ is resource cost. The weights and evaluation protocol must be declared before experiments. This is a proposed metric family, not a universal intelligence equation.
 
 ## 5. Multi-granularity influence as a discovery substrate
 
 Question relationships may connect concepts, attributes, methods, constraints, observations, evidence, failure modes, transfer points, and higher-order question structures. A single first-order concept graph is therefore insufficient as a universal representation.
 
-For a question \(q_i\), let \(F(q_i)=\{f_{i1},\ldots,f_{im}\}\) be typed factors. A directed influence estimate can be expressed as
+For a question $q_i$, let $F(q_i)=\{f_{i1},\ldots,f_{im}\}$ be typed factors. A directed influence estimate can be expressed as
 
 $$
 \widehat I(q_i\rightarrow q_j)=
-operatorname{Fold}_{a,b,k}\!\left[
+mathrm{Fold}_{a,b,k}\!\left[
  w_{abk}\,R_k(f_{ia},f_{jb})\mid E_{abk},U_{abk}
 \right],
 $$
 
-where \(R_k\) denotes a typed relationship, \(E\) evidence, \(U\) uncertainty, and the folding operator is configurable and auditable. In general, \(\widehat I(q_i\rightarrow q_j)\ne\widehat I(q_j\rightarrow q_i)\).
+where $R_k$ denotes a typed relationship, $E$ evidence, $U$ uncertainty, and the folding operator is configurable and auditable. In general, $\widehat I(q_i\rightarrow q_j)\ne\widehat I(q_j\rightarrow q_i)$.
 
 Crucially, **unknown is not zero**. Missing evidence, untested analogies, and unresolved semantic alignments must remain explicit. Novel relation types can be proposed for the Universal Typing and Naming (UTN) system, but type changes require semantic review and compatibility checks.
 
@@ -123,7 +123,7 @@ $$
 V_t(q)=\alpha H_t(q)+\beta I_t(q)+\gamma U_t(q)+\delta L_t(q)-\eta C_t(q),
 $$
 
-where \(H\) estimates historical relevance, \(I\) structural influence, \(U\) uncertainty-sensitive exploratory potential, \(L\) anticipated relay contribution, and \(C\) cost. This formula is an example of a policy-configurable scoring family, **not** a requirement to combine all factors into a fixed additive score. Multi-granularity factor folding may already encode many of these signals; implementations must prevent double counting.
+where $H$ estimates historical relevance, $I$ structural influence, $U$ uncertainty-sensitive exploratory potential, $L$ anticipated relay contribution, and $C$ cost. This formula is an example of a policy-configurable scoring family, **not** a requirement to combine all factors into a fixed additive score. Multi-granularity factor folding may already encode many of these signals; implementations must prevent double counting.
 
 To limit history-induced lock-in, a portfolio can reserve explicit resources for cold-start questions, weak-signal relationships, replication, and counterevidence. Deferred questions should carry revisit triggers rather than being permanently excluded.
 
@@ -227,7 +227,7 @@ If the system optimizes a proxy such as predicted novelty or question influence,
 
 ### 12.3 Search and compute constraints
 
-Pairwise scoring among \(n\) questions is \(O(n^2)\) before accounting for factor-level relations. Candidate retrieval, sparse neighborhoods, hierarchical folding, sampling, and cached historical assessments may be required; approximations must report recall and ranking errors.
+Pairwise scoring among $n$ questions is $O(n^2)$ before accounting for factor-level relations. Candidate retrieval, sparse neighborhoods, hierarchical folding, sampling, and cached historical assessments may be required; approximations must report recall and ranking errors.
 
 ### 12.4 Delayed credit assignment
 
