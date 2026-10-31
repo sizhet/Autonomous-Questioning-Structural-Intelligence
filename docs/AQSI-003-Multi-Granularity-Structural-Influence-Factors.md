@@ -150,7 +150,7 @@ The question-level directional influence is then
 
 $$
 I_t(q_i\rightarrow q_j\mid c)=
-operatorname{Fold}_{\Phi_c}
+mathrm{Fold}_{\Phi_c}
 \left(\{(r_t(u,v\mid c,\rho),w_{uv\rho},e_{uv\rho})\}_{\mathcal{P}_{ij}}\right),
 $$
 
@@ -183,7 +183,7 @@ A new question can be evaluated against both current candidate peers and relevan
 A possible estimator is
 
 $$
-\widehat{V}_t(q)=F_\theta\big(H(q),operatorname{Retrieve}(\mathcal{H}_t,q),c_t\big),
+\widehat{V}_t(q)=F_\theta\big(H(q),mathrm{Retrieve}(\mathcal{H}_t,q),c_t\big),
 $$
 
 where $F_\theta$ may be retrieval plus rules, a statistical ranker, a differential-tree model, or an LLM-based evaluator. Cross-domain reuse requires typed alignment and an explicit transfer uncertainty penalty or calibrated uncertainty estimate.
@@ -220,7 +220,7 @@ A policy may select a subset $P\subseteq Q$ under budget $B$:
 
 $$
 P^*=\arg\max_{P\subseteq Q,\ C(P)\le B}
-operatorname{Utility}_{\pi_t}(P\mid\mathcal{H}_t,G_t),
+mathrm{Utility}_{\pi_t}(P\mid\mathcal{H}_t,G_t),
 $$
 
 where $\pi_t$ is a versioned governance policy. The utility is not presumed universal and should be made inspectable.

@@ -146,7 +146,7 @@ $$
 For candidate mappings $\mathcal M_{s,t}$, one possible score is
 
 $$
-\widehat I_{s\rightarrow t}=operatorname{Fold}_{m\in\mathcal M_{s,t}}
+\widehat I_{s\rightarrow t}=mathrm{Fold}_{m\in\mathcal M_{s,t}}
 \bigl(w_m\,a_m\,e_m\,g_m\bigr),
 $$
 
@@ -347,7 +347,7 @@ AQSI-005 considers goal-open question scoring and portfolio selection. UTN-media
 For candidate target question $q$, one illustrative decomposition is:
 
 $$
-\widehat S(q)=operatorname{Fold}\bigl(
+\widehat S(q)=mathrm{Fold}\bigl(
 S_{\mathrm{local}}(q),
 S_{\mathrm{cross}}(q),
 S_{\mathrm{history}}(q),

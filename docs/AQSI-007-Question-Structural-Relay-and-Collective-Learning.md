@@ -162,7 +162,7 @@ $$
 A directed influence estimate from question $q_i$ to $q_j$ can be expressed as:
 
 $$
-I(q_i\!\rightarrow\!q_j)=operatorname{Fold}_{a,b,r}
+I(q_i\!\rightarrow\!q_j)=mathrm{Fold}_{a,b,r}
 \left(w_{abr}\,R_r(h_{ia},h_{jb})\right),
 $$
 
@@ -251,7 +251,7 @@ A question can contribute to several later discoveries, and several questions ca
 Question Differential Trees (QDTs) can represent shared cores and structured differences among question variants:
 
 $$
-q_k = operatorname{Instantiate}(\mathrm{Core},\Delta_k,\mathrm{Context}_k).
+q_k = mathrm{Instantiate}(\mathrm{Core},\Delta_k,\mathrm{Context}_k).
 $$
 
 Relay may operate at the family level: a reusable method learned for a common core can inform several variants, while an exception discovered in one branch can constrain a narrower subset. Compression should preserve the information necessary to recover validity boundaries, provenance, and uncertainty. A compact representation that erases counterexamples is not an acceptable research relay.

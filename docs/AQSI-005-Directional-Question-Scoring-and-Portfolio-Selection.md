@@ -116,7 +116,7 @@ A configurable folding operator combines the typed factors:
 
 $$
 \widehat{I}(q_i\to q_j)
-=operatorname{Fold}_{\phi}\left(\{w_{ab}^{i\to j}r_{ab}^{i\to j}\}_{a,b}\right).
+=mathrm{Fold}_{\phi}\left(\{w_{ab}^{i\to j}r_{ab}^{i\to j}\}_{a,b}\right).
 $$
 
 The fold must preserve, or explicitly document the loss of, direction, uncertainty, provenance, negative evidence, and unknown factors. A sum is one possible fold, not the universal choice. Alternative folds may be robust, sparse, thresholded, or perspective-aware. Their semantics must be defined in SPEC-002.
@@ -212,7 +212,7 @@ These are predictions, not observed facts. Historical similarity should be typed
 Historical observations may already contribute to structural edge estimates. A naive sum of structural and historical scores can count the same evidence twice. AQSI therefore proposes an **evidence-aware fusion contract**:
 
 $$
-\widehat{V}_i=operatorname{Fuse}_{\eta}
+\widehat{V}_i=mathrm{Fuse}_{\eta}
 \big(S_{\mathrm{out}}(q_i),\widehat{Y}_i,
 \mathcal{E}_i,\mathcal{D}_i\big),
 $$
@@ -241,9 +241,9 @@ One *illustrative*, non-canonical decomposition is:
 
 $$
 F(P)=\sum_{i\in P}\widehat{V}_i
--\alpha\ operatorname{Redundancy}(P)
-+\beta operatorname{Coverage}(P)
-+\gamma operatorname{Complementarity}(P).
+-\alpha\ mathrm{Redundancy}(P)
++\beta mathrm{Coverage}(P)
++\gamma mathrm{Complementarity}(P).
 $$
 
 The coefficients are governed configuration choices, not empirically established constants. The decomposition is only valid if its terms have compatible semantics and overlapping evidence is handled. More principled alternatives include multi-objective Pareto selection, submodular coverage, and constrained bandit policies.

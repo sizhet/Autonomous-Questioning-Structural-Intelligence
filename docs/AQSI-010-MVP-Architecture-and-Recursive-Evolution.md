@@ -179,7 +179,7 @@ A candidate is not accepted merely because it is grammatically well formed. It m
 For question units $q_i$ and $q_j$, let $H(q)$ denote the set of structural factors attached to a question. A general directional influence estimate is:
 
 $$
-\widehat I(q_i\!\rightarrow\!q_j) = operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
+\widehat I(q_i\!\rightarrow\!q_j) = mathrm{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \bigl(w_{ab},\,R(h_{ia},h_{jb}),\,E_{ab},\,U_{ab}\bigr).
 $$
 
@@ -209,7 +209,7 @@ The MVP should support an explicit **defer/revisit** decision. Low predicted val
 Question Differential Trees (QDTs) can encode a shared structural core plus variations:
 
 $$
-q_k = operatorname{Instantiate}(C,\Delta_k,\Gamma_k),
+q_k = mathrm{Instantiate}(C,\Delta_k,\Gamma_k),
 $$
 
 where $C$ is a shared core, $\Delta_k$ is a question-specific structural delta, and $\Gamma_k$ is the relevant domain and evidence context. QDTs may improve retrieval and transfer, but their compression and scoring value must be measured rather than assumed.
@@ -384,10 +384,10 @@ AQSI distinguishes three evolution loops:
 A candidate improvement $\Delta_t$ is accepted only if its evaluation satisfies predetermined constraints:
 
 $$
-operatorname{Accept}(\Delta_t)=
+mathrm{Accept}(\Delta_t)=
 \mathbf 1\{\Delta \widehat U_{\mathrm{heldout}}>\tau\}
-\cdot \mathbf 1\{operatorname{Conformance}(\Delta_t)=\mathrm{pass}\}
-\cdot \mathbf 1\{operatorname{Risk}(\Delta_t)\le r_{\max}\}.
+\cdot \mathbf 1\{mathrm{Conformance}(\Delta_t)=\mathrm{pass}\}
+\cdot \mathbf 1\{mathrm{Risk}(\Delta_t)\le r_{\max}\}.
 $$
 
 The notation is illustrative: practical acceptance may require confidence intervals, multiple independent tests, and human approval. It is important to measure **net** gains after accounting for evaluation cost and additional compute.

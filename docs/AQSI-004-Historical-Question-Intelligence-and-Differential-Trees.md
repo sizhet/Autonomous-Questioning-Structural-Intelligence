@@ -136,7 +136,7 @@ where $C$ denotes concepts, $A$ attributes, $M$ methods, $H$ assumptions/hypothe
 For a question family with core $X_0$, a variant is represented as:
 
 $$
-X(q_i) = operatorname{Apply}(X_0,\Delta_i)
+X(q_i) = mathrm{Apply}(X_0,\Delta_i)
 $$
 
 Here $\Delta_i$ is a typed set of edits, not necessarily numeric subtraction.
@@ -320,10 +320,10 @@ $$
 This can be compared with a history-conditioned score $\hat V_t(q_i)$. One experimental fusion is:
 
 $$
-S(q_i)=operatorname{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
+S(q_i)=mathrm{Fold}_{p}\big(\hat V_t(q_i),S_{\mathrm{group}}(q_i),U_t(q_i)\big)
 $$
 
-where $U_t$ represents uncertainty or unexplored potential and $operatorname{Fold}_p$ is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
+where $U_t$ represents uncertainty or unexplored potential and $mathrm{Fold}_p$ is selected by the active policy. This is a proposed family of mechanisms, not a fixed optimal formula.
 
 A portfolio selector should also consider diversity, dependency, shared cost, and budget. Otherwise densely connected, well-studied question clusters may dominate frontier candidates.
 

@@ -136,7 +136,7 @@ The operational layer executes only authorized exploration contracts (AQSI-006).
 A crucial invariant is:
 
 $$
-operatorname{HighScore}(q)\;\not\Rightarrow\;operatorname{Authorized}(q).
+mathrm{HighScore}(q)\;\not\Rightarrow\;mathrm{Authorized}(q).
 $$
 
 Likewise, a question outside the current funded portfolio is not necessarily unimportant; it may remain archived, unfunded, or eligible for later reconsideration.
@@ -200,11 +200,11 @@ where $I$ is a directed, multi-granularity influence estimate. This score descri
 A strategic policy $\pi$ can be applied at the **eligibility and portfolio layers** without rewriting the definition of structural influence:
 
 $$
-Q_{\pi}=\{q\in Q:operatorname{Eligible}(q,\pi)=1\},
+Q_{\pi}=\{q\in Q:mathrm{Eligible}(q,\pi)=1\},
 $$
 
 $$
-P^*\in\underset{P\subseteq Q_{\pi}}{operatorname{argmax}}
+P^*\in\underset{P\subseteq Q_{\pi}}{mathrm{argmax}}
 \;U(P\mid\pi,\mathcal H,\mathcal E)
 \quad\text{subject to}\quad C_k(P,\pi)\le 0.
 $$
@@ -232,7 +232,7 @@ $$
 An illustrative directed relevance estimator is:
 
 $$
-R(q\rightarrow d)=operatorname{Fold}_{a,b}
+R(q\rightarrow d)=mathrm{Fold}_{a,b}
 \left[w_{ab}\,\rho(x_a\rightarrow y_b\mid\mathcal E,\tau)\right],
 $$
 

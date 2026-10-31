@@ -95,7 +95,7 @@ A concept may be decomposed into attributes, components, mechanisms, methods, co
 A provisional structural influence function is:
 
 $$
-I(q_i,q_j)=operatorname{Fold}_{a,b}\!\left[w_{ab}\,R(h_{ia},h_{jb})\right],
+I(q_i,q_j)=mathrm{Fold}_{a,b}\!\left[w_{ab}\,R(h_{ia},h_{jb})\right],
 $$
 
 where $h_{ia}$ and $h_{jb}$ are addressable structural units associated with two questions, $R$ evaluates a typed relation, $w_{ab}$ represents contextual and evidential weighting, and **Fold** denotes a specified composition operator. The operator may be additive, constrained, nonlinear, or otherwise task-appropriate. The score can be directional: $I(q_i,q_j)\neq I(q_j,q_i)$.
