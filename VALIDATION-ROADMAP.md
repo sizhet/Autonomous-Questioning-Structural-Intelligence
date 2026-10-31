@@ -42,13 +42,13 @@ A **research episode** begins with a frozen candidate set and ends at a prespeci
 
 ### 3.1 Primary outcome: Verified Research Yield (VRY)
 
-Define, for evaluation window \(T\):
+Define, for evaluation window $T$:
 
 $$
-operatorname{VRY}(T)=\frac{\sum_{k\in \mathcal{V}(T)} w_k\,c_k}{operatorname{Cost}(T)}
+mathrm{VRY}(T)=\frac{\sum_{k\in \mathcal{V}(T)} w_k\,c_k}{mathrm{Cost}(T)}
 $$
 
-Here \(\mathcal{V}(T)\) is the set of independently assessed research outputs meeting prespecified acceptance criteria, \(w_k\) is an ex-ante importance weight, and \(c_k\) is a confidence or quality weight assigned by blinded adjudication. Cost must be reported in both compute/tool consumption and human-review effort. This is a **candidate operational metric**, not a universal measure of intelligence; report its components separately to expose weighting sensitivity.
+Here $\mathcal{V}(T)$ is the set of independently assessed research outputs meeting prespecified acceptance criteria, $w_k$ is an ex-ante importance weight, and $c_k$ is a confidence or quality weight assigned by blinded adjudication. Cost must be reported in both compute/tool consumption and human-review effort. This is a **candidate operational metric**, not a universal measure of intelligence; report its components separately to expose weighting sensitivity.
 
 Accepted outputs may include reproducible defect discoveries, validated hypotheses, useful falsifications, verified transfer methods, or reproducible experimental protocols. A fluent answer, a high internal score, or a merely novel question is not sufficient.
 

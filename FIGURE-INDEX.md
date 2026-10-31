@@ -72,7 +72,7 @@
 **Target file:** `figures/Fig-005-Directional-Scoring-and-Portfolio-Selection.png`  
 **Primary insertion:** `docs/AQSI-005-Directional-Question-Scoring-and-Portfolio-Selection.md`, after pairwise directional influence and before portfolio optimization.
 
-**Intended content.** Show a candidate question set, an asymmetric question-to-question influence matrix, historical priors, evidence quality and uncertainty, then a resource-constrained portfolio selector. Include exploitation, exploration, diversity, redundancy, and deferred/revisit options. A goal-open baseline can be illustrated as \(S(q_i)=\sum_{j\ne i}I(q_i\rightarrow q_j)\), with portfolio policies applied separately.
+**Intended content.** Show a candidate question set, an asymmetric question-to-question influence matrix, historical priors, evidence quality and uncertainty, then a resource-constrained portfolio selector. Include exploitation, exploration, diversity, redundancy, and deferred/revisit options. A goal-open baseline can be illustrated as $S(q_i)=\sum_{j\ne i}I(q_i\rightarrow q_j)$, with portfolio policies applied separately.
 
 **Suggested caption:** *Figure 5. Directional influence and historical evidence inform question ranking, while portfolio policies govern the allocation of limited research resources.*
 

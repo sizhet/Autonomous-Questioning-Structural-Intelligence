@@ -69,7 +69,7 @@ An open question is represented here by an identifier, a research issue, a poten
 
 ### OQ-INFL-002 — How should directional influence be defined and calibrated?
 
-**Issue.** The proposed quantity \(I(q_i \rightarrow q_j)\) may represent predicted enablement, information gain, methodological transfer, or another specified relation; these are not interchangeable.
+**Issue.** The proposed quantity $I(q_i \rightarrow q_j)$ may represent predicted enablement, information gain, methodological transfer, or another specified relation; these are not interchangeable.
 
 **Investigation.** Define relation-specific targets, calibration datasets, confidence intervals, and prospective outcome tests.
 
@@ -153,7 +153,7 @@ An open question is represented here by an identifier, a research issue, a poten
 
 ### OQ-PORT-002 — When does pairwise influence sum work?
 
-**Issue.** A baseline score \(S(q_i)=\sum_{j\ne i}I(q_i\rightarrow q_j)\) may favor central or broadly connected questions while overlooking isolated breakthroughs.
+**Issue.** A baseline score $S(q_i)=\sum_{j\ne i}I(q_i\rightarrow q_j)$ may favor central or broadly connected questions while overlooking isolated breakthroughs.
 
 **Investigation.** Compare degree-normalized, robust, novelty-aware, and portfolio-marginal alternatives.
 

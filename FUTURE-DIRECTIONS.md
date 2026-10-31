@@ -53,13 +53,13 @@ Explore Core/Delta representations for question families, including versioning, 
 
 Develop replaceable factor scorers over concept, attribute, method, constraint, evidence, residual, and transfer-point relations. Record direction, evidence basis, confidence, and applicable context for each relation. UTN-based typing and semantic contracts are candidate interoperability mechanisms, not proof of semantic equivalence.
 
-For questions \(q_i\) and \(q_j\), a proposed directional influence model is:
+For questions $q_i$ and $q_j$, a proposed directional influence model is:
 
 $$
-I(q_i\!\rightarrow\!q_j)=operatorname{Fold}_{a,b}\bigl(w_{ab}\,R(h_{ia},h_{jb})\bigr),
+I(q_i\!\rightarrow\!q_j)=mathrm{Fold}_{a,b}\bigl(w_{ab}\,R(h_{ia},h_{jb})\bigr),
 $$
 
-where \(h_{ia}\) and \(h_{jb}\) are heterogeneous structural factors, \(R\) is a typed relation evaluator, and the folding operator is explicitly specified. In general, \(I(q_i\!\rightarrow\!q_j)\neq I(q_j\!\rightarrow\!q_i)\).
+where $h_{ia}$ and $h_{jb}$ are heterogeneous structural factors, $R$ is a typed relation evaluator, and the folding operator is explicitly specified. In general, $I(q_i\!\rightarrow\!q_j)\neq I(q_j\!\rightarrow\!q_i)$.
 
 ### B2. Calibration and uncertainty
 
