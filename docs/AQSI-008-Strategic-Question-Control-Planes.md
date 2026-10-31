@@ -556,7 +556,7 @@ Each hypothesis requires a preregistered outcome definition, relevant baseline, 
 
 - **B0 — Human-only allocation:** experts choose questions without AQSI scoring.
 - **B1 — LLM-only strategic ranking:** one model ranks question descriptions against a policy prompt.
-- **B2 — Greedy structural ranking:** top-$k$ questions by AQSI-005 score, without portfolio constraints.
+- **B2 — Greedy structural ranking:** top-k questions by AQSI-005 score, without portfolio constraints.
 - **B3 — Policy-keyword filtering:** simple eligibility and topic similarity rules.
 - **B4 — SQCP without historical learning:** policy-aware portfolio selection, no HQI.
 - **B5 — SQCP without protected exploration:** same architecture, no diversity or novelty allocation.
