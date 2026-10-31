@@ -100,9 +100,9 @@ A relation MAY connect factors of unequal granularity. A proposed analogy MUST N
 For a question pair `(q_i, q_j)` under context `c` and perspective `p`, define an **illustrative** estimator:
 
 $$
-\widehat I_{p,c}(q_i\rightarrow q_j) = mathrm{Fold}_{\phi,p,c}\left(\left\{
+\widehat I_{p,c}(q_i\rightarrow q_j) = mathrm{Fold}_{\phi,p,c}\left[\left[
  w_{ab,p,c}\,R_{p,c}(h_{ia}\rightarrow h_{jb})
-\right\}_{(a,b)\in E_{ij}}\right).
+\right]_{(a,b)\in E_{ij}}\right].
 $$
 
 Here `h_ia` and `h_jb` are heterogeneous typed factors, `E_ij` is the set of assessed cross-question factor pairs, `R` is a directed relation assessment, and `φ` identifies the folding procedure. This is a **design template**, not a universal metric or a validated equation. Implementations MAY use other estimators if they satisfy the record and audit contracts.
