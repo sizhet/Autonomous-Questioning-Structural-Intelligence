@@ -158,7 +158,7 @@ where $w$ is a context-dependent weight, $e$ captures evidence and uncertainty, 
 
 ### 5.1 Folding options
 
-An implementation may use weighted aggregation, top-$k$ evidence selection, prerequisite-sensitive AND folding, conflict-aware aggregation, or a learned ranker. It must state how it handles missing edges, repeated evidence, correlation, negative evidence, and normalization. Multiple correlated attribute matches should not be counted as independent discoveries.
+An implementation may use weighted aggregation, top-k evidence selection, prerequisite-sensitive AND folding, conflict-aware aggregation, or a learned ranker. It must state how it handles missing edges, repeated evidence, correlation, negative evidence, and normalization. Multiple correlated attribute matches should not be counted as independent discoveries.
 
 ### 5.2 Influence is not value
 
