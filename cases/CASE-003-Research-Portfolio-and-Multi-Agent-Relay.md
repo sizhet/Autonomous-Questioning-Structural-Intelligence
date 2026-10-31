@@ -197,7 +197,7 @@ Let `h_i` denote an estimated historical potential score and `u_i` its uncertain
 For candidate questions `q_i` and `q_j`, define an estimated directed influence:
 
 $$
-I(q_i \rightarrow q_j) = operatorname{Fold}_{a,b}\left(w_{ab}\,R(h_{ia},h_{jb})\right),
+I(q_i \rightarrow q_j) = mathrm{Fold}_{a,b}\left(w_{ab}\,R(h_{ia},h_{jb})\right),
 $$
 
 where `h_ia` and `h_jb` are typed factors, `R` is a contract-governed relation estimator, and the fold operator must declare how it treats unknown relations, dependencies, and evidence confidence. This is a **design family**, not a uniquely validated formula.

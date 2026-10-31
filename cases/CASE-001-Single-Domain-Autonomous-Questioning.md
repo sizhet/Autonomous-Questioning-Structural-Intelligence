@@ -176,14 +176,14 @@ A practical selector also considers historical estimates, evidence quality, unce
 
 $$
 \max_{P\subseteq Q}\left[\sum_{q\in P}\widehat V(q)
-+\lambda\,operatorname{Coverage}(P)
--\mu\,operatorname{Redundancy}(P)\right]
++\lambda\,mathrm{Coverage}(P)
+-\mu\,mathrm{Redundancy}(P)\right]
 $$
 
 subject to:
 
 $$
-\sum_{q\in P}operatorname{Cost}(q)\le B,
+\sum_{q\in P}mathrm{Cost}(q)\le B,
 \qquad P\text{ satisfies policy constraints.}
 $$
 

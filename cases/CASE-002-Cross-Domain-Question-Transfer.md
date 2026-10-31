@@ -156,7 +156,7 @@ A conformant comparison holds retrieval access, exploration budget, and target-d
 Let $H(q)$ denote typed factors of a question. A directional relation score may be defined as:
 
 $$
-I(q_i\rightarrow q_j)=operatorname{Fold}_{a\in H(q_i),\,b\in H(q_j)}
+I(q_i\rightarrow q_j)=mathrm{Fold}_{a\in H(q_i),\,b\in H(q_j)}
 \left[w_{ab}\,R_{ab}(a\rightarrow b)\right].
 $$
 
